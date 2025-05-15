@@ -252,7 +252,7 @@ Para enriquecer la propuesta y prepararla para entornos de producción, se sugie
 
 Esta propuesta integral ofrece una estrategia para:
 
-- **Desacoplar** las funciones actuales en microservicios, mejorando la resiliencia y facilitando actualizaciones.
+- **Desacoplar** las funcionalidades actuales en microservicios, mejorando la resiliencia y facilitando actualizaciones.
 - **Dockerizar** cada componente de forma modular, permitiendo un entorno local robusto y escalable.
 - **Integrar** prácticas adicionales (CI/CD, monitoreo, seguridad y backups) que aseguran la sostenibilidad del proyecto a mediano y largo plazo.
 
@@ -264,6 +264,187 @@ Esta propuesta integral ofrece una estrategia para:
 4. Revisar y ajustar la documentación y especificaciones de API para facilitar futuras integraciones y presentaciones a clientes.
 
 ---
+
+---
+
+# Análisis y Evaluación del Estado Actual
+
+##  Rasa Core
+
+**Funcionalidad:**
+
+- Procesar el lenguaje natural (NLU), gestionar diálogos y orquestar interacciones.
+- Determinar la intención del usuario y coordinar las respuestas, delegando en acciones personalizadas.
+
+**Motivo de Independencia:**
+
+- Aislar la lógica de conversación y el modelo de lenguaje, permitiendo actualizar o escalar el procesamiento de diálogos sin afectar otros componentes.
+
+---
+
+##  LLM Gateway
+
+**Funcionalidad:**
+
+- Servir como interfaz para consultas complejas o fallback en las que Rasa no tenga una respuesta adecuada.
+- Gestionar modelos de lenguaje de gran tamaño (como llama.cpp), realizando tareas de generación o resumen.
+
+**Motivo de Independencia:**
+
+- Los modelos LLM suelen tener altos requerimientos en memoria y CPU/GPU, por lo que desacoplarlos permite asignar recursos específicos y escalarlos según la carga.
+
+---
+
+##  Scheduler (Gestión de Horas)
+
+**Funcionalidad:**
+
+- Administrar la reserva de citas y horarios de atención.
+- Registrar, confirmar y enviar notificaciones (por correo, SMS, etc.) de las citas agendadas.
+
+**Motivo de Independencia:**
+
+- Facilita el cambio de tecnología (por ejemplo, migrar de archivos JSON a una base de datos relacional) y mejora el manejo de la concurrencia sin impactar el flujo conversacional del chatbot.
+
+---
+
+## Evolution API
+
+**Funcionalidad:**
+
+- Administrar la comunicación con WhatsApp a través de WebSocket y API REST.
+- Registrar y procesar interacciones específicas de este canal, aislando la lógica de mensajería.
+
+**Motivo de Independencia:**
+
+- La naturaleza en tiempo real y la posible alta concurrencia de mensajes hacen que sea ideal gestionarlo en un contenedor separado, optimizando recursos y permitiendo actualizaciones específicas para este canal.
+
+---
+
+## Complaints API
+
+**Funcionalidad:**
+
+- Gestionar el registro y seguimiento de reclamos o denuncias de usuarios.
+- Asignar un identificador único para cada reclamo y coordinar notificaciones a otros sistemas (por ejemplo, n8n).
+
+**Motivo de Independencia:**
+
+- Permite escalar y actualizar la lógica de gestión de reclamos de forma aislada, sin interferir con el procesamiento de diálogos o la reserva de citas.
+
+---
+
+## n8n Automations
+
+**Funcionalidad:**
+
+- Orquestar y automatizar flujos de trabajo que conectan varios servicios (por ejemplo, notificaciones, envío de correos o integración con terceros).
+- Coordinar acciones entre Rasa, Scheduler, Complaints API y otros componentes.
+
+**Motivo de Independencia:**
+
+- Un motor de automatización dedicado facilita la integración de procesos asíncronos y permite administrar las dependencias y colas de trabajo sin sobrecargar los servicios de diálogo o reserva.
+
+---
+
+## Web Interface
+
+**Funcionalidad:**
+
+- Servir el frontend de la aplicación, que incluye la interfaz de chat y el dashboard administrativo.
+- Gestionar la interacción del usuario mediante React y el servidor WebSocket (por ejemplo, usando Socket.io).
+
+**Motivo de Independencia:**
+
+- Permite separar la presentación (frontend) de la lógica de backend, facilitando el desarrollo, despliegue y escalabilidad del sistema de interfaz de usuario.
+
+---
+
+##  Data Lake
+
+**Funcionalidad:**
+
+- Almacenar de forma estructurada y escalable los datos recolectados, tanto estáticos (documentos JSON) como transaccionales (datos de citas y reclamos).
+- Implementar versionado y respaldo de datos, utilizando soluciones como MinIO para almacenamiento de objetos y PostgreSQL para transacciones críticas.
+
+**Motivo de Independencia:**
+
+- Centralizar el almacenamiento de datos en un servicio dedicado permite una gestión más robusta de backups, escalabilidad y seguridad sin impactar el rendimiento de los microservicios operacionales.
+
+---
+
+##  Conclusión
+
+Cada una de estas funcionalidades se convertirá en un microservicio independiente para lograr:
+
+- **Desacoplamiento:** Mejorar el mantenimiento y la actualización sin afectar el sistema global.
+- **Escalabilidad:** Permitir asignar recursos específicos a cada servicio según la demanda (por ejemplo, escalar el LLM Gateway o el Scheduler de manera independiente).
+- **Flexibilidad:** Facilitar futuras migraciones o integración con nuevos canales y tecnologías.
+- **Seguridad y Rendimiento:** Aislar los componentes críticos y optimizar el uso de recursos (CPU, GPU, memoria, almacenamiento).
+
+---
+
+---
+
+# Interfaces de Comunicación
+
+1. **APIs REST:**
+
+   - **Propósito:** Permitir que los servicios se comuniquen de forma síncrona mediante solicitudes HTTP, lo que es útil para operaciones que requieren una respuesta inmediata.
+   - **Ejemplo de uso:**
+     - El microservicio Rasa Core expone un endpoint REST (por ejemplo, `/webhooks/rest/webhook`) para recibir mensajes del frontend y responder con los resultados del análisis del lenguaje natural.
+     - El Scheduler puede tener endpoints para reservar, consultar o cancelar citas (por ejemplo, `POST /api/book-slot`).
+   - **Diseño:**
+     - Define rutas claras para cada operación (GET, POST, PUT, DELETE).
+     - Utiliza un API Gateway o un reverse proxy (por ejemplo, Nginx) para centralizar el acceso y mejorar la seguridad (autenticación, validación de JWT, etc.).
+2. **WebSocket:**
+
+   - **Propósito:** Facilitar una comunicación en tiempo real y bidireccional entre el cliente (por ejemplo, el frontend web) y el servidor, lo cual es esencial para experiencias interactivas como chats en vivo o notificaciones instantáneas.
+   - **Ejemplo de uso:**
+     - El microservicio web-interface implementa un servidor WebSocket (por ejemplo, usando Socket.io) para transmitir mensajes instantáneos: el frontend envía un mensaje y recibe la respuesta de Rasa o de otro servicio en tiempo real.
+   - **Diseño:**
+     - Configura los eventos (por ejemplo, `user_uttered` para mensajes entrantes y `bot_message` para respuestas) de forma consistente entre el cliente y el servidor.
+     - Asegúrate de configurar el CORS adecuadamente y de manejar la reconexión en caso de desconexiones.
+3. **Colas de Mensajes:**
+
+   - **Propósito:** Permitir la comunicación asíncrona entre servicios, ideal para procesos que no requieren respuesta inmediata y para desacoplar tareas que pueden ser procesadas en segundo plano (por ejemplo, notificaciones, procesamiento de datos o integración de flujos complejos).
+   - **Ejemplo de uso:**
+     - El microservicio n8n (o un servicio dedicado) puede utilizar RabbitMQ para orquestar flujos, por ejemplo, recibir un mensaje de un reclamo desde el Complaints API y encolar una tarea para enviar un correo de confirmación.
+   - **Diseño:**
+     - Define colas o topics específicos para cada tipo de operación.
+     - Asegúrate de implementar mecanismos de reintentos y de confirmación de recepción para aumentar la fiabilidad.
+
+---
+
+# Estrategia Integrada
+
+**Comunicación entre Microservicios:**
+
+- **Rutas REST:**Cada microservicio expone endpoints REST bien documentados (idealmente utilizando Swagger o Redoc) para permitir la comunicación directa cuando se requiere una respuesta inmediata.
+- **Eventos WebSocket:**El microservicio web-interface mantiene una conexión WebSocket activa para notificar al usuario en tiempo real y para recibir mensajes que luego se redirijan a otros servicios (por ejemplo, enviar un mensaje a Rasa Core a través de un REST API).
+- **Colas de Mensajes:**
+  Utiliza un broker (como RabbitMQ) para conectar los servicios asíncronos. Por ejemplo, cuando un reclamo es registrado en el Complaints API, se envía un mensaje a una cola que n8n supervisa para desencadenar un flujo de notificación, o para que el Scheduler procese la reserva de citas sin bloquear el hilo principal.
+# Munbot-Demo
+
+## Pasos mínimos para levantar el demo rápidamente
+
+1. **Clona el repositorio en la máquina virtual** donde se realizará la demo.
+2. **Copia el archivo `.env.demo` como `.env`** y ajusta los valores con los datos del sandbox de Meta y credenciales necesarias.
+3. **Restaura las carpetas de modelos y datos** que hayan sido excluidas del repositorio (`rasa-core/models`, `rasa-core/data`, etc.). Si tienes un backup, cópialo en la ubicación correspondiente.
+4. **Levanta los servicios con Docker Compose:**
+   ```bash
+   docker-compose up -d
+   ```
+5. **Obtén una URL pública estable para el webhook**. Puedes usar un túnel gratuito como [Cloudflare Tunnel](https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/install-and-setup/tunnel-guide/) o [ngrok](https://ngrok.com/):
+   ```bash
+   cloudflared tunnel --url http://localhost:8080
+   # o
+   ngrok http 8080
+   ```
+6. **Actualiza el webhook en el panel de Meta** con la nueva URL pública generada por el túnel.
+7. **Verifica el flujo de mensajes de extremo a extremo** enviando mensajes de prueba desde WhatsApp y revisando que lleguen correctamente al bot y a los servicios asociados.
+
+> **Nota:** Si tienes problemas con dependencias o archivos faltantes, revisa que las carpetas de modelos y datos estén presentes y que las variables de entorno estén correctamente configuradas.
 
 ---
 
