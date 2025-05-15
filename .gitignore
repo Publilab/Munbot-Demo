@@ -1,0 +1,28 @@
+# Ignorar archivos temporales
+__pycache__/
+*.log
+*.sqlite3
+ngrox
+ngrox.zip
+tan
+# Ignorar archivos de Docker
+.docker/
+build/
+
+# Ignorar archivos de IDE
+.vscode/
+.idea/
+github/
+docker-data/
+
+
+# Ignorar archivos grandes
+*.zip
+*.tar.gz
+
+# Ignorar carpetas
+docker-data/
+Munvenv/
+node_modules/
+llm-gateway/llm-models
+docs/
