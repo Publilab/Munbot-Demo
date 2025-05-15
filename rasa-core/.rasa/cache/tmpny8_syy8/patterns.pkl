@@ -1,0 +1,58 @@
+[
+  {
+    "name": "nombre_usuario",
+    "pattern": "(\\bJuan\\b|\\bMaria\\b|\\bPedro\\b|\\bAna\\b|\\bLuis\\b|\\bEmilio\\ Ibarra\\b|\\bLuisa\\ Uribe\\b|\\bEmilio\\ Ibarra\\ Parraguez\\b|\\bEmilio\\b|\\bCarlos\\b|\\bSofia\\b|\\bAriel\\b|\\bAndres\\b|\\bPedro\\ Carvajal\\b|\\bValentina\\b|\\bDiego\\b|\\bPedro\\ Esquivel\\ Troncoso\\b|\\bIsabel\\ Castro\\ Camacho\\b|\\bErnesto\\ del\\ Valle\\b|\\bJuan\\ Carlos\\ del\\ Rio\\ Gonzalez\\b|\\bMaria\\ Jose\\ de\\ la\\ Fuente\\b|\\bPedro\\ Pablo\\ de\\ la\\ Cruz\\ Retamales\\b|\\bAna\\ Maria\\ de\\ la\\ Sierra\\ Perez\\b)"
+  },
+  {
+    "name": "campo_requisito",
+    "pattern": "(\\brequisitos\\b|\\bpapeles\\b|\\bpapel\\b|\\bdocumentos\\b|\\bdocumento\\b|\\bdocumentación\\b|\\bdocumentacion\\b)"
+  },
+  {
+    "name": "campo_ubicacion",
+    "pattern": "(\\bdonde\\b|\\ba\\ dónde\\b|\\bdónde\\b|\\ben\\ donde\\b|\\bdirección\\b|\\bdireccion\\b|\\boficina\\b|\\boficinas\\b)"
+  },
+  {
+    "name": "campo_horario",
+    "pattern": "(\\bhorario\\b|\\bhora\\b|\\batencion\\b|\\batención\\b|\\bhorarios\\b)"
+  },
+  {
+    "name": "campo_contacto",
+    "pattern": "(\\bcorreo\\ electrónico\\b|\\bescribir\\b|\\bcorreo\\b|\\bemail\\b|\\be\\-mail\\b)"
+  },
+  {
+    "name": "campo_telefono",
+    "pattern": "(\\btelefono\\b|\\bllamar\\b|\\bholocom\\b|\\bholocom\\ number\\b|\\bnúmero\\b|\\bteléfono\\b)"
+  },
+  {
+    "name": "campo_duracion",
+    "pattern": "(\\bdura\\b|\\btiempo\\b|\\bvigencia\\b|\\bduración\\b|\\bvalidez\\b|\\bcaduca\\b|\\btiempo\\ de\\ validez\\b|\\bvalides\\b|\\bvalidez\\b|\\bbalides\\b)"
+  },
+  {
+    "name": "campo_sanciones",
+    "pattern": "(\\bpasar\\b|\\bmulta\\b|\\bsancion\\b|\\bpenalidad\\b|\\bsanción\\b|\\bsanciones\\b|\\bpenalidades\\b)"
+  },
+  {
+    "name": "tipo_documento",
+    "pattern": "(\\bcertificado\\b|\\bsertificado\\b|\\bpermiso\\b|\\blicencia\\b|\\bpatente\\b|\\bcédula\\b|\\bcedula\\b|\\bcarné\\b|\\bcarnet\\b|\\bcarnese\\b)"
+  },
+  {
+    "name": "nombre_documento_cert",
+    "pattern": "(\\bCertificado\\ de\\ Residencia\\ Definitiva\\b|\\bCertificado\\ de\\ Antecedentes\\b|\\bCertificado\\ de\\ Estadía\\ Temporal\\b|\\bCertificado\\ de\\ Enrolamiento\\ Militar\\ de\\ la\\ República\\b|\\bCertificado\\ Registro\\ de\\ Droides\\b|\\bCertificado\\ Registro\\ de\\ Carga\\b|\\bCertificado\\ de\\ Extracción\\ Productiva\\b)"
+  },
+  {
+    "name": "nombre_documento_ced",
+    "pattern": "(\\bCédula\\ Única\\ Sistema\\ Planetario\\b|\\bCédula\\ de\\ Bienestar\\ Social\\b)"
+  },
+  {
+    "name": "accion_crd",
+    "pattern": "(\\bdemostrar\\b|\\bdemuestro\\b|\\bacreditar\\b|\\bacredito\\b|\\bcomprobar\\b|\\bcompruebo\\b|\\bcertificar\\b|\\bcertifico\\b)"
+  },
+  {
+    "name": "dia_cita",
+    "pattern": "(\\blunes\\b|\\bmartes\\b|\\bmiércoles\\b|\\bjueves\\b|\\bviernes\\b|\\bsábado\\b|\\bdomingo\\b)"
+  },
+  {
+    "name": "tipo_reclamo",
+    "pattern": "(\\bseguridad\\b|\\btrámites\\b|\\batención\\ al\\ cliente\\b|\\bcomunidad\\b|\\bautoridades\\b|\\bservicios\\b)"
+  }
+]

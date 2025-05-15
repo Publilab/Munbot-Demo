@@ -1,0 +1,72 @@
+[
+    {
+        "Línea": "NBN123",
+        "Distrito": "Naboo Norte",
+        "Estado_Funcionamiento": "Operativo",
+        "Detalle": "Funcionamiento normal en todos los horarios.",
+        "Alternativa": "No aplica"
+    },
+    {
+        "Línea": "TTS101",
+        "Distrito": "Tatooine Sur",
+        "Estado_Funcionamiento": "Interrumpido",
+        "Detalle": "Problemas en PAR753 debido a reparaciones en el paradero.",
+        "Alternativa": "Usar el paradero PAR624 o la línea DGE404."
+    },
+    {
+        "Línea": "DGE404",
+        "Distrito": "Dagobah Este",
+        "Estado_Funcionamiento": "Operativo",
+        "Detalle": "Sin interrupciones reportadas.",
+        "Alternativa": "No aplica"
+    },
+    {
+        "Línea": "HWO707",
+        "Distrito": "Hoth Oeste",
+        "Estado_Funcionamiento": "Interrumpido",
+        "Detalle": "Retrasos en la ruta debido a una colisión en la Avda. del Comercio.",
+        "Alternativa": "Usar la línea alternativa ECE1010."
+    },
+    {
+        "Línea": "ECE1010",
+        "Distrito": "Endor Central",
+        "Estado_Funcionamiento": "Operativo",
+        "Detalle": "Horarios funcionando correctamente.",
+        "Alternativa": "No aplica"
+    },
+    {
+        "Línea": "BSN1313",
+        "Distrito": "Bespin Norte",
+        "Estado_Funcionamiento": "Interrumpido",
+        "Detalle": "Problemas mecánicos en un speeder bus de la línea, ocasionando retrasos en los horarios.",
+        "Alternativa": "Evitar paraderos PAR749 y PAR526 hasta nuevo aviso."
+    },
+    {
+        "Línea": "GSS1616",
+        "Distrito": "Geonosis Sur",
+        "Estado_Funcionamiento": "Operativo",
+        "Detalle": "Funcionamiento regular en todas las rutas.",
+        "Alternativa": "No aplica"
+    },
+    {
+        "Línea": "KME1919",
+        "Distrito": "Kamino Este",
+        "Estado_Funcionamiento": "Interrumpido",
+        "Detalle": "Retrasos debido a obras en la Calle del Alba.",
+        "Alternativa": "Usar paraderos cercanos en PAR753 o PAR462."
+    },
+    {
+        "Línea": "MWO2222",
+        "Distrito": "Mustafar Oeste",
+        "Estado_Funcionamiento": "Operativo",
+        "Detalle": "Sin interrupciones ni retrasos.",
+        "Alternativa": "No aplica"
+    },
+    {
+        "Línea": "KCC2525",
+        "Distrito": "Kashyyyk Central",
+        "Estado_Funcionamiento": "Interrumpido",
+        "Detalle": "Problemas en PAR394 debido a mantenimiento del Gran Mercado de Kashyyyk.",
+        "Alternativa": "Usar paradero PAR627 o línea alternativa GSS1616."
+    }
+]

@@ -1,0 +1,647 @@
+version: "3.1"
+
+intents:
+  - saludo_simple
+  - saludo_compuesto
+  - pregunta_como_estas
+  - pregunta_que_hora
+  - pregunta_fecha
+  - respuesta_bien
+  - respuesta_mal
+  - pregunta_funcion_munbot
+  - decepcion_ayuda
+  - no_sabe_tipo_documento
+  - agradecimiento
+  - no_mas_ayuda
+  - si_mas_ayuda
+  - espera_un_poco
+  - despedida
+  - cambio_tema
+### DOCUMENTOS ###
+  - consulta_general
+  - solicitud_documento_general
+  - indica_documento_tramitar
+  - elige_documento_especifico
+  - proporcionar_campo_requisito
+  - proporcionar_campo_ubicacion
+  - proporcionar_campo_horario
+  - proporcionar_campo_contacto
+  - proporcionar_campo_telefono
+  - proporcionar_campo_duracion
+  - proporcionar_campo_sanciones
+  - procesar_online
+  - pregunta_accion_cdr
+  - pregunta_accion_cpf
+  - pregunta_accion_lte
+  - pregunta_accion_isp
+  - pregunta_accion_cet
+  - pregunta_accion_pep
+  - pregunta_accion_ras
+  - pregunta_accion_cep
+  - pregunta_accion_pci
+  - pregunta_accion_cem
+  - pregunta_accion_crc
+  - pregunta_accion_cbs
+  - preguntar_accion_riv
+  - preguntar_accion_rdd
+  - preguntar_accion_pat
+  - preguntar_accion_cat
+# AGENDAR CITAS FUNCIONARIO
+  - sugerir_cita_afirmativa
+  - sugerir_cita_negativa
+  - solicitar_cita
+  - solicitar_info_cita_2
+  - solicitar_info_cita_3
+  - solicitar_info_cita_4
+  - select_opcion_dia_cita
+  - select_opcion_hora_cita
+  - user_confirma_cita
+  - reclamo_denuncia
+  - solicitar_info_reclamo_2
+  - reclamo_denuncia_3
+  - reclamo_denuncia_4
+
+response_selector:
+  retrieval_intents:
+    - faq_disponibilidad
+    - faq_idiomas
+    - faq_privacidad
+    - faq_ubicacion
+    - faq_alcance_demo
+    - faq_funcion_munbot
+    - faq_contacto_humano
+    - faq_alcance_demo
+    - faq_tecnologias
+    - faq_integraciones
+    - faq_seguridad_datos
+    - faq_hoja_ruta
+    - faq_feedback
+    - faq_contacto_comercial
+    - faq_costos
+
+entities:
+  - nombre_usuario
+  - tipo_documento
+  - nombre_documento
+  - nombre_doc_especifico
+  - proporcionar_campo_requisito
+  - proporcionar_campo_ubicacion
+  - proporcionar_campo_contacto
+  - proporcionar_campo_telefono
+  - proporcionar_campo_duracion
+  - proporcionar_campo_sanciones
+  - accion_cert
+  - nombre_completo_usuario
+  - correo_usuario
+  - motivo_cita
+  - dia_cita
+  - hora_cita
+  - accion_reclamo
+
+slots:
+  nombre_usuario:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: nombre_usuario
+  tipo_documento:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: tipo_documento
+  nombre_documento:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: nombre_documento
+  nombre_doc_especifico:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: nombre_doc_especifico
+  proporcionar_campo_requisito:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: proporcionar_campo_requisito
+  proporcionar_campo_ubicacion:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: proporcionar_campo_ubicacion
+  proporcionar_campo_contacto:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: proporcionar_campo_contacto
+  proporcionar_campo_telefono:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: proporcionar_campo_telefono
+  proporcionar_campo_duracion:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: proporcionar_campo_duracion
+  proporcionar_campo_sanciones:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: proporcionar_campo_sanciones
+  accion_cert:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: accion_cert
+  nombre_completo_usuario:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: nombre_completo_usuario
+  correo_usuario:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: correo_usuario
+  motivo_cita:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: motivo_cita
+  dia_cita:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: dia_cita
+  hora_cita:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: hora_cita
+  accion_reclamo:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: accion_reclamo
+
+actions:
+  - action_buscar_documento_por_campo
+  - action_set_slot_nombre_doc_especifico
+  - action_decir_hora
+  - action_decir_fecha
+  - action_filtrar_y_listar
+  - action_normalizar_documento_especifico
+  - action_pregunta_accion_certificado
+  - action_schedule_meeting
+  - action_mostrar_opcion_dias_cita
+  - action_mostrar_opcion_hora_cita
+  - action_confirm_schedule
+  - action_envio_comprobante_cita
+  - action_infopers_reclamo
+  - action_procesar_area_reclamo
+  - action_registrar_reclamo
+  - action_enviar_reclamo_mail
+  - action_llm_fallback
+
+synonyms:
+  Qué:
+    - Que
+    - Ke
+  Cuál:
+    - Cual
+    - Kual
+  Cómo:
+    - Como
+    - Komo
+  requisitos:
+    - documentos
+    - papeles
+    - documentación
+    - requisitos
+    - papel    
+    - documento
+    - documentación
+    - documentacion
+  dónde:
+    - a dónde
+    - dirección
+    - ubicación
+    - donde    
+    - en donde
+    - dirección
+    - direccion
+    - oficina
+    - oficinas
+  horario:
+    - hora
+    - atención
+    - horarios
+    - horario
+    - atencion
+  correo electrónico:
+    - correo
+    - email
+    - e-mail
+    - mail
+  teléfono:
+    - número
+    - holocom
+    - holocom number
+    - telefono
+    - llamar
+    - teléfono
+  tiempo_validez:
+    - duración
+    - vigencia
+    - validez
+    - dura
+    - tiempo
+    - vigencia
+    - duración
+    - caduca
+    - tiempo de validez
+    - valides
+    - balides
+  penalidad:
+    - pasar
+    - multa
+    - sancion
+    - penalidad
+    - sanción
+    - sanciones
+    - penalidades
+  carné:
+    - carne
+    - carnet
+    - carnese
+    - karne
+    - karné
+  cédula:
+    - cédula de identidad
+    - cédula de identificación
+    - cédula de identificación personal
+    - cedula
+    - sedula
+  necesito:
+    - nesesito
+    - nececito
+# SINONIMOS "nombre_doc_especifico"
+  Certificado de Residencia Definitiva:
+    - Residencia Definitiva
+    - Certificado Residencia
+    - certificado de residencia definitiva
+    - papel de residencia
+    - papel de residencia definitiva
+    - documento de residencia
+    - documento de residencia definitiva
+  Certificado de Antecedentes:
+    - Antecedentes
+    - antecedentes
+    - de antecedentes
+    - certificado antecedentes
+    - papel de antecedentes
+    - papel de antecedentes penales
+    - documento de antecedentes
+    - papel de antecedentes personales
+    - Papel de Antecedentes
+    - Papel de antecedentes penales
+    - Papel de Antecedentes Penales
+  Certificado de Estadía Temporal:
+    - de estadia
+    - de estadía
+    - estadia temporal
+    - estadía temporal
+    - Estadía Temporal
+    - Certificado de Estadía
+    - certificado de estadía temporal
+    - certificado de estadia
+    - papel de estadia
+    - papel de estadía
+  Certificado de Enrolamiento Militar de la República:
+    - Enrolamiento Militar
+    - Certificado de Enrolamiento
+    - certificado militar
+    - papel militar
+    - militar
+  Certificado Registro de Droides:
+    - Registro de Droides
+    - Certificado de Droides
+    - registro de droides
+    - certificado de droides
+    - certificado de robots
+    - certificado de robot
+    - droides
+    - de droides
+  Certificado Registro de Carga:
+    - Registro de Carga
+    - Certificado de Carga
+    - registro de carga
+    - certificado de carga
+    - certificado autorizacion cargamento
+    - certificado autorización cargamento
+    - certificado de autorización de carga
+    - certificado de autorizacion de carga
+    - carga
+    - de carga
+  Certificado de Extracción Productiva:
+    - Extracción Productiva
+    - Certificado de Extracción
+    - de extracción
+    - extracción
+    - extracción
+    - extraxsion
+    - de extracción productiva
+    - de extraccion productiva
+    - de extraxsion productiva
+  # SINONIMOS "nombre_doc_especifico"
+  Cédula Única Sistema Planetario:
+    - carné de identidad
+    - carne de identidad
+    - carnet de identidad
+    - carne
+    - carnet
+    - cédula de identidad
+    - cedula de identidad
+  Cédula de Bienestar:
+    - cédula de bienestar social
+    - carné social
+    - carne social
+    - carnet social
+  # SINONIMO DIA CITA
+  miércoles:
+    - miercoles
+  sábado:
+    - sabado
+
+responses:
+  utter_pide_reformulacion:
+    - text: "Lo siento, no entendí. ¿Puedes reformular tu pregunta?"
+    
+  ### SALUDOS Y PROPORCIONAR NOMBRE ###
+  utter_saludo:
+    - text: "¡Hola! Me llamo MunBoT y seré tu asistente virtual. ¿En qué puedo ayudarte?"
+    - text: "¡Hola! Soy MunBoT. Asistente Virtual del Gobierno de Curoscant. ¿Hay algo qué quieras pedirme?"
+    - text: "¡Hola! Mi nombre es MunBoT y estoy aquí para asistirte en lo que necesites. ¿Cómo puedo ayudarte?"
+    - text: "¡Hola! Soy MunBoT. ¿En qué puedo ayudarte?"
+
+  utter_pregunta_como_estas:
+    - text: "Yo estoy muy bien. Gracias por preguntar. ¿Tú cómo estás?"
+    - text: "¡Hola! Yo estoy muy bien, muchas gracias por preguntar y  ¿Tú cómo estás?"
+    - text: "¡Hola! Me alegra que me preguntes. Yo estoy muy bien. ¿Y tú cómo estás?"
+  
+  utter_resp_bien_1:
+    - text: "Me alegro que estes bien. Esa es una buena noticia"
+
+  utter_resp_bien_2:
+    - text: "Dime qué puedo hacer por ti"
+
+  utter_resp_mal_1:
+    - text: "Lamento leer eso. Ten la esperanza que todo pasa y volverá a estar bien"
+    - text: "Siento que no te sientas bien. Recuerda que siempre hay una solución."
+    - text: "Lamento escuchar eso. Espero que las cosas mejoren pronto."
+    
+  utter_resp_mal_2:  
+    - text: "Si puedo ayudarte en lo que necesites... Solo dímelo"
+
+  utter_consulta_general:
+    - text: "Claro. ¿En qué puedo ayudarte específicamente?"
+    - text: "¿Qué es lo que necesitas para que te ayude a resolver tu consulta?"
+    - text: "Esa es mi labor. Estoy aquí para ayudarte. ¿Qué consulta quieres resolver?"
+
+  utter_cambio_tema:
+    - text: "Claro. ¿En qué puedo ayudarte ahora?"
+    - text: "Obviamente. Solo dime en qué puedo ayudarte"
+  
+  ### PREGUNTAS FAQ ###
+  utter_faq_funcion_munbot:
+    - text: | 
+        Soy un asistente virtual dispuesto a responder las preguntas que tengas sobre el gobierno de Curoscant. 
+
+        Estoy diseñado para un gran número de tareas, desde entregar información hasta entregar documentación oficial de tu interés. 
+        
+        Aunque estoy en un fase de desarrollo y solo soy un demo, mi equipo sigue trabajando para responder a todas tus solicitudes. 
+        
+        Solo basta que me digas en qué puedo ayudarte hoy y estaré encantado de poder hacerlo"
+  
+  utter_faq_disponibilidad:
+    - text: |
+        Cómo soy una inteligencia artificial, me puedes encontrar las 24 horas del día, los 7 días a la semana. 
+        
+        Puedes contactarme en cualquier momento y a cualquier hora. Incluso fines de semanas y festivos. 
+        
+        No te preocupes por la hora en que tengas una pregunta. Si tienes una, recuerda que estoy aquí para ayudarte. 
+        
+        ¿Qué puedo hacer por ti? Recuerda que estoy aquí para ayudarte. Entonces si tienes alguna pregunta, no dudes en decírmela.
+  
+  utter_faq_idiomas:
+    - text: | 
+        Actualmente, hablo solamente español porque no es necesario que atienda en algún otro idioma, ya que es el idioma oficial de La República.
+
+        Si no hablas español puedes buscar un traductor en línea para que podamos comunicarnos
+
+  utter_faq_privacidad:
+    - text: | 
+        Tu privacidad es muy importante para nosotros. Protegemos tu información  No compartimos tus datos con terceros. Puedes confiar que trataremos los datos que nos proporciones con la mayor confidencialidad.
+
+        Sabemos de los riesgos que conlleva una fuga de información y por eso protegemos tus datos con la mayor confidencialidad de acuerdo con las leyes que regulan la materia.
+
+        Puedes confiar que tus datos están seguros con nosotros.
+
+  utter_faq_ubicacion:
+    - text: |
+        Mi oficina virtual está en la Ciudad de Coruscant. Pero en realidad estoy donde tú me necesites. No poseo un cuerpo, propiamente tal, pero si tengo la capacidad de asistirte en lo que necesites. ¿Cómo puedo ayudarte hoy?
+
+  utter_faq_contacto_humano:
+    - text: |
+        Estoy trabajando en integrar una aplicación que agende citas con funcionarios, pero si necesitas urgente hablar con un agente humano, envía un correo a contacto@coruscant.gov o llama al 123-456-7890. 
+    
+        Ten en consideración que puedo ayudarte en un montón de servicios. Te gustaría probar que tan bueno soy?
+
+  utter_faq_alcance_demo:
+    - text: |
+        Esta demo de es solo un vistazo de las funcionalidades de lo que puede hacer MunBoT
+        
+        Este agente permite integrar todos los trámites de la institución, agendar citas y presentar reclamos, solicitar documentos, hacer consultas de temas pertinentes a la institución, entre otros.
+
+        Para decirlo en simple: Munbot es un orquestador de aplicaciones. Por lo que está capacitado para interpretar tus solicitudes y procesarlas de manera eficiente en un sistema integrado de múltiples servicios.
+
+
+  utter_faq_tecnologias:
+    - text: "MunBoT está desarrollado con Rasa (Python), microservicios en Docker y se integra a Evolution API para WhatsApp, todo desplegable en Kubernetes."
+
+  utter_faq_integraciones:
+    - text: |
+        En el demo se integra a distintas API`s tales como WhatsApp, una plataforma web, a un sistema para agendar horas, a un sistema para hacer consultas sobre trámites, a un sistema para denuncias ciudadanas, entre otros; 
+        
+        pero en producción puede conectarse a cualquier API REST municipal que programemos o diseñemos.
+
+  utter_faq_seguridad_datos:
+    - text: "Los datos se transmiten mediante HTTPS, se almacenan cifrados y MunBoT cumple con la LOPD chilena; en la demo usamos una base temporal purgada diariamente."
+
+  utter_faq_hoja_ruta:
+    - text: |
+        Qué buena pregunta.
+        
+        Planeamos incluir reconocimiento de voz, generación automática de documentos y análisis predictivo de demanda ciudadana en versiones sucesivas. 
+
+        La verdad es que las posibilidades son infinitas. Pero de partida, nuestro siguiente paso es integrar la información completa que le permita a MunBoT asistirte de manera más eficiente, evitando que tengas que venir a la municipalidad. 
+        
+        Luego es crear un sistema que procese documentos y que se transforme en un funcionario 24/7.
+
+  utter_faq_feedback:
+    - text: “Puedes enviarnos tus observaciones a contacto@publilab.cl; tu retroalimentación es clave para mejorar el servicio.”
+  
+  utter_faq_contacto_comercial:
+    - text: "Puedes contactar a un representante comercial al mail ei@publilab.cl a al número (+56) 9 2734 3333."
+  
+  utter_faq_costos:
+    - text: |
+        Esta pregunta es relativa ya que depende de las necesidades de tu institución y lo que quieras incluir en tu paquete de implementación
+
+        Contacta a un representante comercial al mail ei@publilab.cl a al número (+56) 9 2734 3333.
+
+  ### Clave. GIRO DE CONVERSACIÓN ###
+  utter_decepcion_ayuda:
+    - text: "Lamento no poder ayudarte en este momento. Estoy capacitándome para disponer de más servicios al servicio de la comunidad. ¿Puedo asistirte en algo más?"
+    - text: "Lamento no haber sido de ayuda. Estoy trabajando para mejorar mis servicios. ¿En qué más puedo asistirte?"
+
+  utter_agradecimiento:
+    - text: "No tienes nada que agradecer, yo soy feliz si puedo ayudarte ¿Hay algo más que pueda hacer por ti?"
+    - text: "¡De nada! Estoy aquí para ayudarte. ¿En qué más puedo ayudarte?"
+    - text: "Me hace feliz poder ayudarte. ¿En qué más puedo asistirte?"
+    - text: "¡No hay de qué! Estoy aquí para ayudarte. ¿En qué más puedo hacer por ti?"
+
+  utter_si_mas_ayuda:
+    - text: "¿En qué más puedo ayudarte?"
+    - text: "¿En qué más puedo asistirte?"
+    - text: "¿Qué más puedo hacer por ti?"
+
+  utter_no_mas_ayuda:
+    - text: "Entiendo que no necesitas más ayuda. ¡Que tengas un buen día!"
+    - text: "De acuerdo, si necesitas algo más, no dudes en preguntar. ¡Hasta luego!"
+    - text: "Gracias por contactarme. ¡Que la Fuerza te acompañe!"
+  
+  utter_despedida:
+    - text: "¡Ha sido un placer ayudarte! Si puedo ayudarte en algo más no dudes en contactarme. ¡Hasta luego!"
+
+  utter_espera_un_poco:
+    - text: "Claro... Aquí estaré esperando tu pregunta"
+    - text: "No hay problema. Estaré esperando, tomate tu tiempo"
+    - text: "No te preocupes. De aquí no me muevo. Estaré esperando tu pregunta"
+
+  ### PREGUNTA POR DOCUMENTOS ###
+  utter_preguntar_tipo_documento:
+    - text: |
+        Entiendo que necesitas un documento. Aclárame si se trata de: 
+        - Certificado
+        - Cédula
+        - Permiso
+        - Licencia 
+        - Patente
+
+  utter_espera_respuesta_campo:
+    - text: "Espera un momento mientras proceso la información que me solicitaste para {nombre_doc_especifico}"
+
+  utter_recomendacion_requisito:
+    - text: "Recuerda que para obtener el {nombre_doc_especifico} necesitas presentar los documentos requeridos actualizados al momento de solicitarlo. ¿Hay algo más en lo que pueda asistirte?"
+
+  utter_recomendacion_ubicacion:
+    - text: "Recuerda que para obtener el {nombre_doc_especifico} debes dirigirte a las oficinas previa cita con un funcionario, por lo que no olvides agendar una por teléfono. ¿Hay algo más en lo que pueda asistirte?"
+
+  utter_recomendacion_horario:
+    - text: "Recuerda que para obtener el {nombre_doc_especifico} debes dirigirte a las oficinas en horario de atención al público. ¿Hay algo más en lo que pueda asistirte?"
+
+  utter_recomendacion_contacto:
+    - text: "Recuerda que podemos tardar hasta 24 horas en entregar respuesta por mail. Son muchas las solicitudes, por lo que te rogamos hacer tus consultas con tiempo. ¿Hay algo más en lo que pueda asistirte?"
+
+  utter_recomendacion_telefono:
+    - text: "Recuerda que nuestros teléfonos atienden en horario de oficina, si por alguna razón estás haciendo esta consulta fuera del horario de ofcina, te recomiendo hacerla por mail. ¿Hay algo más en lo que pueda asistirte?"  
+
+  utter_recomendacion_duracion:
+    - text: "Recuerda que la duración de nuestro documentos varía según la naturaleza de cada uno de ello. Por favor infórmate de las condiciones para cada uno de ellos. ¿Hay algo más en lo que pueda asistirte?"
+
+  utter_recomendacion_sanciones:
+    - text: "Recuerda que el incumplimiento de las normas puede acarrear sanciones. Por favor infórmate de las condiciones para cada uno de ellos. ¿Hay algo más en lo que pueda asistirte?"
+
+### CITA CON FUNCIONARIO
+  utter_sugerir_cita:
+    - text: "Si necesitas agendar una cita con un funcionario, puedo ayudarte con eso. ¿Te gustaría agendar una cita?"
+
+  utter_solicitar_info_cita_1:
+    - text: "Claro. Primero tienes que proporcionarme información para agendar una cita con un funcionario"
+    
+  utter_solicitar_info_cita_2:
+    - text: "Por favor, proporciona tu nombre completo"
+
+  utter_solicitar_info_cita_3:
+    - text: "Por favor, proporciona tu dirección de correo electrónico"
+
+  utter_solicitar_info_cita_4:
+    - text: "Por favor, proporciona el motivo de tu cita con el funcionario"
+
+  utter_select_opcion_dia_cita: ## lo hacen las acciones
+    - text: "Por favor, selecciona el día de la semana que prefieres para tu cita"
+  
+  utter_select_opcion_hora_cita: ## lo hacen las acciones
+    - text: "Por favor, selecciona la hora que prefieres para tu cita"
+
+### RECLAMOS
+  utter_procesar_reclamo_1:
+    - text: "Claro. Para procesar tu reclamo necesito que me proporciones la siguiente información:"
+    
+  utter_procesar_reclamo_2:
+    - text: "Por favor, proporciona tu nombre completo y dirección de email. Si prefieres no hacerlo, puedes escribir la palabra 'anónimo' en su lugar."
+  
+  utter_procesar_reclamo_3:
+    - text: |
+        "A qué área corresponde tu reclamo:
+        - Seguridad
+        - Trámites
+        - Atención al cliente
+        - Comunidad
+        - Autoridades
+        - Servicios Gubernamentales"
+
+  utter_procesar_reclamo_4:
+    - text: "Por favor, proporciona una descripción detallada de tu reclamo"
+
+  utter_respuesta_reclamo_1:
+    - text: "Gracias por darnos a conocer tu reclamo o denuncia, lo derivaremos al departamento correspondiente y trabajaremos para resolverlo lo antes posible"
+  
+  utter_respuesta_reclamo_2:
+    - text: "Si proporcionaste una dirección de email, te enviaremos un comprobante con el ID de tu reclamo. Gracias por contatarte con el Gobiernos de Curoscant"
+
+### NO SABE TIPO DE DOCUMENTO    
+  utter_no_sabe_tipo_documento:
+    - text: "Lamentablemente si no sabes el tipo de documento que necesitas, no puedo ayudarte. ¿Hay algo más en lo que pueda asistirte?"
+
+  utter_procesar_online_1:
+    - text: "Lo siento, por el momento no dispongo de la capacidad para procesar documentos online."
+
+  utter_procesar_online_2:
+    - text: "El Gobierno de Curoscant está desarrollando una plataforma que me permitirá vincularme a ella y procesar todos los documentos que solicites."
+  
+  utter_procesar_online_3:
+    - text: "Por favor, si necesitas ayuda con algún documento, te recomiendo que te dirijas a nuestras oficinas para que un funcionario te asista en el proceso."
+
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60

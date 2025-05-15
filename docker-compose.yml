@@ -1,0 +1,342 @@
+services:
+  # Microservicio Rasa Core para chatbot
+  rasa-core:
+    build: ./rasa-core
+    container_name: rasa-server
+    ports:
+      - "5005:5005"
+    command: ["rasa", "run", "--enable-api", "--cors", "*", "--port", "5005"]
+    volumes:
+      - ./rasa-core:/app
+    networks:
+      - munbot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    depends_on:
+      - actions
+    restart: unless-stopped
+
+  # Contenedor para ejecutar las acciones personalizadas de Rasa
+  actions:
+    build: ./rasa-core
+    container_name: rasa-actions
+    ports:
+      - "5055:5055"
+    command: ["rasa", "run", "actions", "--port", "5055"]
+    volumes:
+      - ./rasa-core:/app
+    networks:
+      - munbot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: unless-stopped
+
+  # Microservicio para el registro de reclamos
+  complaints-api:
+    build: ./complaints-api
+    container_name: complaints-api
+    ports:
+      - "3001:7000"
+    environment:
+      - MONGODB_URI=${MONGODB_URI}
+      - EMAIL_HOST=${EMAIL_HOST}
+      - EMAIL_PORT=${EMAIL_PORT}
+      - EMAIL_USER=${EMAIL_USER}
+      - EMAIL_PASS=${EMAIL_PASS}
+      - PORT=7000
+    depends_on:
+      - mongo
+    networks:
+      - munbot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: unless-stopped
+
+  # Base de datos Mongo para complaints-api
+  mongo:
+    image: mongo:5.0
+    container_name: mongo
+    volumes:
+      - complaints-data:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - munbot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: unless-stopped
+
+  # Microservicio Evolution API para la comunicación vía WhatsApp (WebSocket)
+  evolution-api:
+    build: ./evolution-api
+    container_name: evolution-api
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./evolution-api/src/history.json:/app/src/history.json
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/complaints_db
+      - PORT=8080
+      - EMAIL_HOST=smtp.gmail.com
+      - EMAIL_PORT=587
+      - EMAIL_USER=publilab.consulting@gmail.com
+      - EMAIL_PASS=Zankudo1976
+      - META_WABA_ID=${META_WABA_ID}
+      - META_PHONE_ID=${META_PHONE_ID}
+      - META_TOKEN=${META_TOKEN}
+      - META_VERIFY_TOKEN=${META_VERIFY_TOKEN}
+      - N8N_USER=admin
+      - N8N_PASSWORD=secret
+      - N8N_RUNNERS_ENABLED=true
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+      - COMPLAINTS_URL=http://complaints-api:3001/webhook/complaint
+      - N8N_URL=http://n8n:5678/webhook/event
+      - RASA_URL=http://rasa-core:5005/webhooks/evolution
+      - LLM_URL=http://llm-gateway:8000/process
+      - VITE_API_BASE_URL=http://evolution-api:8080
+      - VITE_DEMO_MODE=true
+      - VITE_ALLOW_ALL_IPS=true
+      - SENDGRID_API_KEY=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
+      - GLOBAL_API_KEY=munbot-evolution-api-key-2023 # <--- Aquí está
+    depends_on:
+      - redis
+      - n8n
+    networks:
+      - munbot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: unless-stopped
+
+  # Servicio Redis para Evolution API
+  redis:
+    image: redis:alpine
+    container_name: redis
+    networks:
+      - munbot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: unless-stopped
+
+  # Microservicio Evolution Manager (panel de control)
+  evolution-manager:
+    build:
+      context: ./evolution-manager/evolution-manager
+      args:
+        - VITE_API_URL=http://localhost:8080 # URL accesible desde el navegador
+    ports:
+      - "9615:9615"
+    environment:
+      # VITE_API_URL se usa principalmente en el build, pero se deja aquí por si acaso
+      - VITE_API_URL=http://evolution-api:8080 # URL para comunicación interna si fuera necesaria en runtime
+      - AUTHENTICATION_API_KEY=${AUTHENTICATION_API_KEY}
+    depends_on:
+      - evolution-api
+    networks:
+      - munbot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: unless-stopped
+
+  # Microservicio Scheduler para la gestión de citas y notificaciones
+  scheduler:
+    build: ./scheduler
+    container_name: scheduler
+    ports:
+      - "6001:6001"
+    volumes:
+      - ./scheduler/data:/app/data
+    environment:
+      - FLASK_ENV=development
+      - SENDGRID_API_KEY=${SENDGRID_API_KEY}
+      - META_WABA_ID=${META_WABA_ID}
+      - META_PHONE_ID=${META_PHONE_ID}
+      - META_TOKEN=${META_TOKEN}
+      - META_VERIFY_TOKEN=${META_VERIFY_TOKEN}
+      - PORT=6001
+      - ENABLE_METRICS=true
+    networks:
+      - munbot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    restart: unless-stopped
+
+  # Microservicio LLM Gateway para consultas de fallback y respuestas complejas
+  llm-gateway:
+    build: ./llm-gateway
+    container_name: llm-gateway
+    ports:
+      - "8000:8000"
+    volumes:
+      - llm-models:/app/models
+      - ./llm-gateway/documents:/app/documents
+    depends_on:
+      - n8n
+    networks:
+      - munbot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    environment:
+      - ALLOWED_IPS=127.0.0.1,192.168.65.1,172.18.0.5
+      - ALLOWED_IPS=127.0.0.1,172.18.0.2
+    restart: unless-stopped
+
+   # n8n para automatización de flujos (usamos imagen oficial)
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: n8n
+    restart: unless-stopped
+    environment:
+      - TZ=America/Santiago
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=StrongPass!
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=postgres
+      - DB_POSTGRESDB_DATABASE=n8n
+      - DB_POSTGRESDB_USER=n8n
+      - DB_POSTGRESDB_PASSWORD=n8npass
+      - N8N_RUNNERS_ENABLED=true
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+      - N8N_LOG_LEVEL=debug
+      - N8N_LOG_OUTPUT=console
+
+    ports:
+      - "5678:5678"
+    volumes:
+      - n8n_data:/home/node/.n8n
+    networks:
+      - munbot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    depends_on:
+      - postgres
+
+  # Servicio de base de datos Postgres para n8n
+  postgres:
+    image: postgres:16
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_PASSWORD=n8npass
+      - POSTGRES_USER=n8n
+      - POSTGRES_DB=n8n
+    volumes:
+      - pg:/var/lib/postgresql/data
+    networks:
+      - munbot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: unless-stopped
+    command: serve
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+    networks:
+      - munbot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  prometheus:
+    image: prom/prometheus:v2.51.0
+    container_name: prometheus
+    restart: unless-stopped
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+    networks:
+      - munbot-network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  grafana:
+    image: grafana/grafana:11.0.0
+    container_name: grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin123
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./monitoring/grafana/dashboards.yml:/etc/grafana/provisioning/dashboards.yml:ro
+    depends_on:
+      - prometheus
+    ports:
+      - "3000:3000"
+    networks:
+      - munbot-network
+    restart: unless-stopped
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.49.1
+    container_name: cadvisor
+    ports:
+      - "8081:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+    networks:
+      - munbot-network
+    restart: unless-stopped
+
+volumes:
+  complaints-data:
+  llm-models:
+  n8n_data:
+  evolution-history:
+  pg:
+  ollama:
+  prometheus_data:
+  grafana_data:
+  cadvisor:
+
+networks:
+  munbot-network:
+    driver: bridge

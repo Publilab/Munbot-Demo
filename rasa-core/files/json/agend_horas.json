@@ -1,0 +1,111 @@
+{
+    "funcionarios": [
+      {
+        "nom_func": "Lando Calrissian",
+        "cod_fun": "F001",
+        "horarios": {
+          "08:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "09:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "09:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "pending"},
+          "10:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "10:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "11:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "11:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "12:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "confirmed"},
+          "12:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"}
+        }
+      },
+      {
+        "nom_func": "Wedge Antilles",
+        "cod_fun": "F002",
+        "horarios": {
+          "08:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "09:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "09:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "10:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "10:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "11:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "11:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "12:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "12:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"}
+        }
+      },
+      {
+        "nom_func": "Mon Mothma",
+        "cod_fun": "F003",
+        "horarios": {
+          "08:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "09:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "09:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "10:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "10:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "11:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "11:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "12:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+          "12:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"}
+        }
+      },
+      {
+        "nom_func": "Nien Nunb",
+        "cod_fun": "F004",
+        "horarios": {
+            "08:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "09:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "09:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "10:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "10:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "11:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "11:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "12:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "12:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"}
+          }
+      },
+      {
+        "nom_func": "Almirante Ackbar",
+        "cod_fun": "F005",
+        "horarios": {
+            "08:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "09:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "09:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "10:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "10:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "11:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "11:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "12:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "12:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"}
+          }
+      },
+      {
+        "nom_func": "Greedo",
+        "cod_fun": "F006",
+        "horarios": {
+            "08:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "09:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "09:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "10:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "10:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "11:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "11:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "12:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "12:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"}
+          }
+      },
+      {
+        "nom_func": "Bib Fortuna",
+        "cod_fun": "F007",
+        "horarios": {
+            "08:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "09:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "09:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "10:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "10:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "11:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "11:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "12:00": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"},
+            "12:30": {"usuario": null, "email_usuario": null, "descripcion_consulta": null, "estado": "available"}
+          }
+      }
+    ]
+  }
+  
+

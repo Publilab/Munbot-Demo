@@ -1,0 +1,154 @@
+version: "3.1"
+
+rules:
+### SALUDOS
+  - rule: general_saludo
+    steps:
+      - intent: saludo_simple
+      - action: utter_saludo
+  
+  - rule: general_saludo_completo
+    steps:
+      - intent: saludo_compuesto
+      - action: utter_pregunta_como_estas
+  
+  - rule: pregunta_como_estas
+    steps:
+      - intent: pregunta_como_estas
+      - action: utter_pregunta_como_estas
+
+  - rule: pregunta_que_hora
+    steps:
+      - intent: pregunta_que_hora
+      - action: action_decir_hora
+
+  - rule: pregunta_fecha
+    steps:
+      - intent: pregunta_fecha
+      - action: action_decir_fecha
+
+### CONSULTAS GENERALES DIRIGIDAS
+  - rule: general_consulta_general
+    steps:
+      - intent: consulta_general
+      - action: utter_consulta_general
+  
+  - rule: general_espera
+    steps:
+      - intent: espera_un_poco   
+      - action: utter_espera_un_poco
+
+  - rule: procesar_documentos_online
+    steps:
+      - intent: procesar_online
+      - action: utter_procesar_online_1
+      - action: utter_procesar_online_2
+      - action: utter_procesar_online_3
+
+  - rule: pregunta_accion_cdr
+    steps:
+      - intent: pregunta_accion_cdr
+      - action: action_pregunta_accion_certificado
+
+  - rule: pregunta_accion_cpf
+    steps:
+      - intent: pregunta_accion_cpf
+      - action: action_pregunta_accion_certificado
+
+  - rule: pregunta_accion_lte
+    steps:
+      - intent: pregunta_accion_lte
+      - action: action_pregunta_accion_certificado
+
+  - rule: pregunta_accion_isp
+    steps:
+      - intent: pregunta_accion_isp
+      - action: action_pregunta_accion_certificado
+
+  - rule: pregunta_accion_cet
+    steps:
+      - intent: pregunta_accion_cet
+      - action: action_pregunta_accion_certificado
+
+  - rule: pregunta_accion_pep
+    steps:
+      - intent: pregunta_accion_pep
+      - action: action_pregunta_accion_certificado
+  
+  - rule: pregunta_accion_cep
+    steps:
+      - intent: pregunta_accion_cep
+      - action: action_pregunta_accion_certificado  
+
+  - rule: pregunta_accion_ras
+    steps:
+      - intent: pregunta_accion_ras
+      - action: action_pregunta_accion_certificado
+
+  - rule: pregunta_accion_pci
+    steps:
+      - intent: pregunta_accion_pci
+      - action: action_pregunta_accion_certificado
+
+  - rule: pregunta_accion_cem
+    steps:
+      - intent: pregunta_accion_cem
+      - action: action_pregunta_accion_certificado
+
+  - rule: pregunta_accion_crc
+    steps:
+      - intent: pregunta_accion_crc
+      - action: action_pregunta_accion_certificado
+
+  - rule: pregunta_accion_cbs
+    steps:
+      - intent: pregunta_accion_cbs
+      - action: action_pregunta_accion_certificado
+
+  - rule: preguntar_accion_riv
+    steps:
+      - intent: preguntar_accion_riv
+      - action: action_pregunta_accion_certificado
+
+  - rule: preguntar_accion_rdd
+    steps:
+      - intent: preguntar_accion_rdd
+      - action: action_pregunta_accion_certificado
+
+  - rule: preguntar_accion_pat
+    steps:
+      - intent: preguntar_accion_pat
+      - action: action_pregunta_accion_certificado
+
+  - rule: preguntar_accion_cat
+    steps:
+      - intent: preguntar_accion_cat
+      - action: action_pregunta_accion_certificado
+  
+###FALLBACK  
+  - rule: Fallback pide reformulación
+    steps:
+      - action: utter_pide_reformulacion
+
+  - rule: Fallback tras reformulación
+    steps:
+      - action: action_llm_fallback
+
+### CAMBIO DE TEMA
+  - rule: cambio_tema
+    steps:
+      - intent: cambio_tema
+      - action: utter_cambio_tema
+
+### CITAS
+  - rule: acepta_cita_sugerida
+    steps:
+      - action: utter_sugerir_cita
+      - intent: sugerir_cita_afirmativa
+      - action: utter_solicitar_info_cita_1
+
+  - rule: rechaza_cita_sugerida
+    steps:
+      - action: utter_sugerir_cita
+      - intent: sugerir_cita_negativa
+      - action: utter_despedida

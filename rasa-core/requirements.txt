@@ -1,0 +1,42 @@
+rasa==3.6.20
+tensorflow==2.12.0
+h5py==3.7.0
+SQLAlchemy<2.0
+requests==2.31.0
+torch==1.13.1
+python-socketio==5.7.2
+python-engineio==4.3.4
+transformers==4.24.0
+future==0.18.3
+huggingface-hub==0.10.1
+spacy==3.4.1
+matplotlib==3.5.3
+seaborn==0.12.1
+nltk==3.7
+gensim==4.2.0
+
+# Web Server Dependencies
+sanic==21.12.0
+sanic-cors<2.1.0
+
+# Otros componentes de Rasa
+numpy==1.23.5
+pandas==1.5.3
+scikit-learn<1.2
+
+# Logging y utilidades
+setuptools>=58.0.0
+wheel==0.41.2
+
+# Para el servidor de eventos
+jsonschema==4.7.2
+PyYAML==6.0
+tqdm==4.64.1
+packaging==20.9
+terminaltables==3.1.10
+tabulate==0.8.10
+aiohttp==3.9.1
+coloredlogs==15.0.1
+colorhash==1.0.4
+questionary==1.10.0
+pylint==2.15.0

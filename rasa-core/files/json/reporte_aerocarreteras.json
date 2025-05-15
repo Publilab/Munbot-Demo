@@ -1,0 +1,92 @@
+[
+    {
+        "Ruta": "Coruscant-Naboo",
+        "Origen": "Coruscant",
+        "Destino": "Naboo",
+        "Estado": "Operativo",
+        "Incidente": null,
+        "Detalle": "Tráfico interdimensional fluido. Sin contratiempos reportados.",
+        "Ultima_Actualizacion": "2024-12-22T08:00:00Z"
+    },
+    {
+        "Ruta": "Coruscant-Tatooine",
+        "Origen": "Coruscant",
+        "Destino": "Tatooine",
+        "Estado": "Interrumpido",
+        "Incidente": "Ataque de piratas espaciales",
+        "Detalle": "La ruta se encuentra temporalmente cerrada debido a actividad pirata reportada cerca del cinturón de asteroides de Ord Mantell. Refuerzos de seguridad han sido desplegados.",
+        "Ultima_Actualizacion": "2024-12-22T07:45:00Z"
+    },
+    {
+        "Ruta": "Coruscant-Dagobah",
+        "Origen": "Coruscant",
+        "Destino": "Dagobah",
+        "Estado": "Operativo",
+        "Incidente": null,
+        "Detalle": "Condiciones climáticas estables. Hiperpuertas operativas.",
+        "Ultima_Actualizacion": "2024-12-22T08:00:00Z"
+    },
+    {
+        "Ruta": "Coruscant-Mustafar",
+        "Origen": "Coruscant",
+        "Destino": "Mustafar",
+        "Estado": "Interrumpido",
+        "Incidente": "Erupción volcánica",
+        "Detalle": "Desvíos establecidos debido a una erupción volcánica que afecta la infraestructura local de transporte dimensional.",
+        "Ultima_Actualizacion": "2024-12-22T07:30:00Z"
+    },
+    {
+        "Ruta": "Coruscant-Bespin",
+        "Origen": "Coruscant",
+        "Destino": "Bespin",
+        "Estado": "Operativo",
+        "Incidente": null,
+        "Detalle": "Condiciones estables en la ruta de hipervelocidad. Tránsito sin inconvenientes.",
+        "Ultima_Actualizacion": "2024-12-22T08:00:00Z"
+    },
+    {
+        "Ruta": "Coruscant-Kamino",
+        "Origen": "Coruscant",
+        "Destino": "Kamino",
+        "Estado": "Interrumpido",
+        "Incidente": "Tormenta hídrica",
+        "Detalle": "Las condiciones meteorológicas extremas en Kamino han cerrado temporalmente la ruta. Se recomienda utilizar rutas alternativas.",
+        "Ultima_Actualizacion": "2024-12-22T07:50:00Z"
+    },
+    {
+        "Ruta": "Coruscant-Endor",
+        "Origen": "Coruscant",
+        "Destino": "Endor",
+        "Estado": "Operativo",
+        "Incidente": null,
+        "Detalle": "Tránsito seguro. Sin reportes de incidentes.",
+        "Ultima_Actualizacion": "2024-12-22T08:00:00Z"
+    },
+    {
+        "Ruta": "Coruscant-Geonosis",
+        "Origen": "Coruscant",
+        "Destino": "Geonosis",
+        "Estado": "Interrumpido",
+        "Incidente": "Colisión de cargueros",
+        "Detalle": "Un accidente entre dos cargueros ha bloqueado la entrada principal al sistema de Geonosis. Equipos de rescate y limpieza están trabajando en el lugar.",
+        "Ultima_Actualizacion": "2024-12-22T07:40:00Z"
+    },
+    {
+        "Ruta": "Coruscant-Hoth",
+        "Origen": "Coruscant",
+        "Destino": "Hoth",
+        "Estado": "Operativo",
+        "Incidente": null,
+        "Detalle": "Hiperpuertas funcionales. Sin demoras en la ruta.",
+        "Ultima_Actualizacion": "2024-12-22T08:00:00Z"
+    },
+    {
+        "Ruta": "Coruscant-Kashyyyk",
+        "Origen": "Coruscant",
+        "Destino": "Kashyyyk",
+        "Estado": "Interrumpido",
+        "Incidente": "Interferencia rebelde",
+        "Detalle": "Fuerzas rebeldes han establecido un bloqueo temporal en las cercanías de Kashyyyk. Navegantes deben seguir instrucciones de seguridad.",
+        "Ultima_Actualizacion": "2024-12-22T07:35:00Z"
+    }
+]

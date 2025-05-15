@@ -1,0 +1,55 @@
+version: "3.1"
+
+recipe: default.v1
+
+assistant_id: 20241203-181329-matching-chapel
+
+language: es
+
+pipeline:
+  - name: SpacyNLP
+    model: "es_core_news_md"
+  - name: SpacyTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 120
+    constrain_similarities: true
+    number_of_transformer_layers: 2
+    transformer_size: 256
+    ranking_length: 5
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 120
+    constrain_similarities: true
+    number_of_transformer_layers: 2
+    transformer_size: 256
+    ranking_length: 5
+    retrieval_intents:
+      - faq_disponibilidad
+      - faq_idiomas
+      - faq_privacidad
+      - faq_ubicacion
+      - faq_contacto_humano
+      - faq_funcion_munbot
+    hidden_layers_sizes: {'text': [], 'label': []}
+  - name: FallbackClassifier
+    threshold: 0.3
+    ambiguity_threshold: 0.1
+  
+policies:
+  - name: RulePolicy
+    core_fallback_threshold: 0.3
+    core_fallback_action_name: "action_default_fallback"
+    enable_fallback_prediction: true
+  - name: MemoizationPolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 120
+    constrain_similarities: true
+  - name: AugmentedMemoizationPolicy
+    max_history: 5

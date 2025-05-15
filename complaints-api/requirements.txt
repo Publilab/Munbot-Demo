@@ -1,0 +1,7 @@
+Flask==2.2.2
+python-dotenv==1.0.0
+Flask-Mail==0.9.1
+pydantic==2.5.2
+Werkzeug==2.2.3
+pyOpenSSL==23.2.0
+gunicorn==21.2.0

@@ -1,0 +1,11 @@
+[
+    {
+        "id": "3f8d0291-6d0e-4eb3-932d-786df1d47b6b",
+        "categoria": 1,
+        "departamento": 2,
+        "mensaje": "No hay iluminaci\u00f3n",
+        "nombre_denunciante": "Juan",
+        "mail": "juan@example.com",
+        "ip": "192.168.65.1"
+    }
+]

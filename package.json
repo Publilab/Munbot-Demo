@@ -1,0 +1,27 @@
+{
+  "name": "munbot-docker",
+  "version": "1.0.0",
+  "description": "## Introducción",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Publilab/munbot-docker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Publilab/munbot-docker/issues"
+  },
+  "homepage": "https://github.com/Publilab/munbot-docker#readme",
+  "dependencies": {
+    "n8n-nodes-websockets-lite": "^0.3.4",
+    "n8n-nodes-websockets-lite-a": "^0.5.8"
+  }
+}

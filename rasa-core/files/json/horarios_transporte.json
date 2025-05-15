@@ -1,0 +1,1322 @@
+[
+    {
+        "Distrito": "Naboo Norte",
+        "Línea": "NBN123",
+        "Paradero": "PAR542",
+        "Horario": [
+            "06:15",
+            "07:30",
+            "08:45",
+            "10:00",
+            "11:15",
+            "12:30",
+            "13:45",
+            "15:00",
+            "16:15",
+            "17:30"
+        ],
+        "Ubicación": "Cruce de Avda. Palacio Real con Calle de las Estrellas",
+        "Locaciones_Cercanas": [
+            "Palacio Real de Naboo",
+            "Templo de los Jedi",
+            "Cantina Coruscant",
+            "Tienda de Blásteres Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Naboo Norte",
+        "Línea": "NBN123",
+        "Paradero": "PAR819",
+        "Horario": [
+            "06:20",
+            "07:35",
+            "08:50",
+            "10:05",
+            "11:20",
+            "12:35",
+            "13:50",
+            "15:05",
+            "16:20",
+            "17:35"
+        ],
+        "Ubicación": "Frente al Templo de Naboo",
+        "Locaciones_Cercanas": [
+            "Templo de los Jedi",
+            "Palacio Real de Naboo",
+            "Parque del Saber Dagobah",
+            "Tienda de Ropa Bespin"
+        ]
+    },
+    {
+        "Distrito": "Naboo Norte",
+        "Línea": "NBN123",
+        "Paradero": "PAR275",
+        "Horario": [
+            "06:25",
+            "07:40",
+            "08:55",
+            "10:10",
+            "11:25",
+            "12:40",
+            "13:55",
+            "15:10",
+            "16:25",
+            "17:40"
+        ],
+        "Ubicación": "Cruce de Calle del Rey con Avda. del Trabajo",
+        "Locaciones_Cercanas": [
+            "Calle del Rey Sith",
+            "Avda. del Trabajo Rebelde",
+            "Tienda de Tecnología Skywalker",
+            "Cantina de la Noche Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Naboo Norte",
+        "Línea": "NBN123",
+        "Paradero": "PAR467",
+        "Horario": [
+            "06:30",
+            "07:45",
+            "09:00",
+            "10:15",
+            "11:30",
+            "12:45",
+            "14:00",
+            "15:15",
+            "16:30",
+            "17:45"
+        ],
+        "Ubicación": "Frente al Gran Mercado de Naboo",
+        "Locaciones_Cercanas": [
+            "Gran Mercado de Naboo",
+            "Tienda de Armas Imperial",
+            "Parque de la Paz Alderaan",
+            "Biblioteca de Naboo"
+        ]
+    },
+    {
+        "Distrito": "Naboo Norte",
+        "Línea": "NBN123",
+        "Paradero": "PAR932",
+        "Horario": [
+            "06:35",
+            "07:50",
+            "09:05",
+            "10:20",
+            "11:35",
+            "12:50",
+            "14:05",
+            "15:20",
+            "16:35",
+            "17:50"
+        ],
+        "Ubicación": "Cruce de Calle del Saber con Avda. de la Paz",
+        "Locaciones_Cercanas": [
+            "Calle del Saber Jedi",
+            "Avda. de la Paz Rebelde",
+            "Parque de la Paz Alderaan",
+            "Tienda de Componentes Droides"
+        ]
+    },
+    {
+        "Distrito": "Naboo Norte",
+        "Línea": "NBN123",
+        "Paradero": "PAR118",
+        "Horario": [
+            "06:40",
+            "07:55",
+            "09:10",
+            "10:25",
+            "11:40",
+            "12:55",
+            "14:10",
+            "15:25",
+            "16:40",
+            "17:55"
+        ],
+        "Ubicación": "Frente al Museo de la Historia Naboo",
+        "Locaciones_Cercanas": [
+            "Museo de la Historia Jedi",
+            "Parque de la Paz Alderaan",
+            "Tienda de Arte Coruscant",
+            "Cantina de la Mañana Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Naboo Norte",
+        "Línea": "NBN123",
+        "Paradero": "PAR753",
+        "Horario": [
+            "06:45",
+            "08:00",
+            "09:15",
+            "10:30",
+            "11:45",
+            "13:00",
+            "14:15",
+            "15:30",
+            "16:45",
+            "18:00"
+        ],
+        "Ubicación": "Cruce de Avda. del Alba con Calle del Rey",
+        "Locaciones_Cercanas": [
+            "Avda. del Alba Dagobah",
+            "Calle del Rey Sith",
+            "Tienda de Joyería Bespin",
+            "Parque de la Juventud Endor"
+        ]
+    },
+    {
+        "Distrito": "Naboo Norte",
+        "Línea": "NBN123",
+        "Paradero": "PAR624",
+        "Horario": [
+            "06:50",
+            "08:05",
+            "09:20",
+            "10:35",
+            "11:50",
+            "13:05",
+            "14:20",
+            "15:35",
+            "16:50",
+            "18:05"
+        ],
+        "Ubicación": "Frente al Teatro Real de Naboo",
+        "Locaciones_Cercanas": [
+            "Teatro Real de Naboo",
+            "Parque de la Juventud Endor",
+            "Tienda de Ropa Bespin",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Naboo Norte",
+        "Línea": "NBN123",
+        "Paradero": "PAR351",
+        "Horario": [
+            "06:55",
+            "08:10",
+            "09:25",
+            "10:40",
+            "11:55",
+            "13:10",
+            "14:25",
+            "15:40",
+            "16:55",
+            "18:10"
+        ],
+        "Ubicación": "Cruce de Calle del Saber con Avda. del Sol",
+        "Locaciones_Cercanas": [
+            "Calle del Saber Jedi",
+            "Avda. del Sol Rebelde",
+            "Parque del Sol Alderaan",
+            "Tienda de Libros Coruscant"
+        ]
+    },
+    {
+        "Distrito": "Naboo Norte",
+        "Línea": "NBN123",
+        "Paradero": "PAR986",
+        "Horario": [
+            "07:00",
+            "08:15",
+            "09:30",
+            "10:45",
+            "12:00",
+            "13:15",
+            "14:30",
+            "15:45",
+            "17:00",
+            "18:15"
+        ],
+        "Ubicación": "Frente al Gran Hospital de Naboo",
+        "Locaciones_Cercanas": [
+            "Gran Hospital de Naboo",
+            "Parque del Sol Alderaan",
+            "Tienda de Medicinas Coruscant",
+            "Cantina de la Noche Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Tatooine Sur",
+        "Línea": "TTS101",
+        "Paradero": "PAR219",
+        "Horario": [
+            "06:10",
+            "07:25",
+            "08:40",
+            "09:55",
+            "11:10",
+            "12:25",
+            "13:40",
+            "14:55",
+            "16:10",
+            "17:25"
+        ],
+        "Ubicación": "Cruce de Calle del Sabio con Avda. del Comercio",
+        "Locaciones_Cercanas": [
+            "Calle del Sabio Sith",
+            "Avda. del Comercio Rebelde",
+            "Tienda de Armas Imperial",
+            "Cantina de la Mañana Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Tatooine Sur",
+        "Línea": "TTS101",
+        "Paradero": "PAR467",
+        "Horario": [
+            "06:30",
+            "07:45",
+            "09:00",
+            "10:15",
+            "11:30",
+            "12:45",
+            "14:00",
+            "15:15",
+            "16:30",
+            "17:45"
+        ],
+        "Ubicación": "Frente al Mercado de Desechos de Tatooine",
+        "Locaciones_Cercanas": [
+            "Mercado de Desechos de Tatooine",
+            "Tienda de Componentes Droides",
+            "Parque de los Desechos Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Tatooine Sur",
+        "Línea": "TTS101",
+        "Paradero": "PAR982",
+        "Horario": [
+            "06:20",
+            "07:35",
+            "08:50",
+            "10:05",
+            "11:20",
+            "12:35",
+            "13:50",
+            "15:05",
+            "16:20",
+            "17:35"
+        ],
+        "Ubicación": "Cruce de Calle del Alba con Avda. del Sol",
+        "Locaciones_Cercanas": [
+            "Calle del Alba Dagobah",
+            "Avda. del Sol Rebelde",
+            "Parque del Sol Alderaan",
+            "Tienda de Joyería Bespin"
+        ]
+    },
+    {
+        "Distrito": "Tatooine Sur",
+        "Línea": "TTS101",
+        "Paradero": "PAR135",
+        "Horario": [
+            "06:25",
+            "07:40",
+            "08:55",
+            "10:10",
+            "11:25",
+            "12:40",
+            "13:55",
+            "15:10",
+            "16:25",
+            "17:40"
+        ],
+        "Ubicación": "Frente al Gran Forjador de Tatooine",
+        "Locaciones_Cercanas": [
+            "Gran Forjador de Tatooine",
+            "Tienda de Componentes Droides",
+            "Parque de los Forjadores Geonosis",
+            "Cantina de la Mañana Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Tatooine Sur",
+        "Línea": "TTS101",
+        "Paradero": "PAR753",
+        "Horario": [
+            "06:30",
+            "07:45",
+            "09:00",
+            "10:15",
+            "11:30",
+            "12:45",
+            "14:00",
+            "15:15",
+            "16:30",
+            "17:45"
+        ],
+        "Ubicación": "Cruce de Calle del Alba con Avda. del Sol",
+        "Locaciones_Cercanas": [
+            "Calle del Alba Dagobah",
+            "Avda. del Sol Rebelde",
+            "Parque del Sol Alderaan",
+            "Tienda de Joyería Bespin"
+        ]
+    },
+    {
+        "Distrito": "Tatooine Sur",
+        "Línea": "TTS101",
+        "Paradero": "PAR624",
+        "Horario": [
+            "06:35",
+            "07:50",
+            "09:05",
+            "10:20",
+            "11:35",
+            "12:50",
+            "14:05",
+            "15:20",
+            "16:35",
+            "17:50"
+        ],
+        "Ubicación": "Frente al Gran Forjador de Tatooine",
+        "Locaciones_Cercanas": [
+            "Gran Forjador de Tatooine",
+            "Tienda de Componentes Droides",
+            "Parque de los Forjadores Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Tatooine Sur",
+        "Línea": "TTS101",
+        "Paradero": "PAR391",
+        "Horario": [
+            "06:40",
+            "07:55",
+            "09:10",
+            "10:25",
+            "11:40",
+            "12:55",
+            "14:10",
+            "15:25",
+            "16:40",
+            "17:55"
+        ],
+        "Ubicación": "Cruce de Calle del Alba con Avda. del Sol",
+        "Locaciones_Cercanas": [
+            "Calle del Alba Dagobah",
+            "Avda. del Sol Rebelde",
+            "Parque del Sol Alderaan",
+            "Tienda de Joyería Bespin"
+        ]
+    },
+    {
+        "Distrito": "Tatooine Sur",
+        "Línea": "TTS101",
+        "Paradero": "PAR269",
+        "Horario": [
+            "06:45",
+            "08:00",
+            "09:15",
+            "10:30",
+            "11:45",
+            "13:00",
+            "14:15",
+            "15:30",
+            "16:45",
+            "18:00"
+        ],
+        "Ubicación": "Frente al Gran Mercado de Tatooine",
+        "Locaciones_Cercanas": [
+            "Gran Mercado de Tatooine",
+            "Tienda de Componentes Droides",
+            "Parque de los Forjadores Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Tatooine Sur",
+        "Línea": "TTS101",
+        "Paradero": "PAR743",
+        "Horario": [
+            "06:50",
+            "08:05",
+            "09:20",
+            "10:35",
+            "11:50",
+            "13:05",
+            "14:20",
+            "15:35",
+            "16:50",
+            "18:05"
+        ],
+        "Ubicación": "Cruce de Calle del Sabio con Avda. del Comercio",
+        "Locaciones_Cercanas": [
+            "Calle del Sabio Sith",
+            "Avda. del Comercio Rebelde",
+            "Tienda de Armas Imperial",
+            "Cantina de la Mañana Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Tatooine Sur",
+        "Línea": "TTS101",
+        "Paradero": "PAR519",
+        "Horario": [
+            "06:55",
+            "08:10",
+            "09:25",
+            "10:40",
+            "11:55",
+            "13:10",
+            "14:25",
+            "15:40",
+            "16:55",
+            "18:10"
+        ],
+        "Ubicación": "Frente al Gran Forjador de Tatooine",
+        "Locaciones_Cercanas": [
+            "Gran Forjador de Tatooine",
+            "Tienda de Componentes Droides",
+            "Parque de los Forjadores Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Dagobah Este",
+        "Línea": "DGE404",
+        "Paradero": "PAR947",
+        "Horario": [
+            "06:05",
+            "07:20",
+            "08:35",
+            "09:50",
+            "11:05",
+            "12:20",
+            "13:35",
+            "14:50",
+            "16:05",
+            "17:20"
+        ],
+        "Ubicación": "Cruce de Calle del Sabio con Avda. del Comercio",
+        "Locaciones_Cercanas": [
+            "Calle del Sabio Sith",
+            "Avda. del Comercio Rebelde",
+            "Tienda de Armas Imperial",
+            "Cantina de la Mañana Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Dagobah Este",
+        "Línea": "DGE404",
+        "Paradero": "PAR132",
+        "Horario": [
+            "06:10",
+            "07:25",
+            "08:40",
+            "09:55",
+            "11:10",
+            "12:25",
+            "13:40",
+            "14:55",
+            "16:10",
+            "17:25"
+        ],
+        "Ubicación": "Frente al Gran Templo del Saber",
+        "Locaciones_Cercanas": [
+            "Gran Templo del Saber Jedi",
+            "Tienda de Componentes Droides",
+            "Parque del Saber Dagobah",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Dagobah Este",
+        "Línea": "DGE404",
+        "Paradero": "PAR658",
+        "Horario": [
+            "06:15",
+            "07:30",
+            "08:45",
+            "10:00",
+            "11:15",
+            "12:30",
+            "13:45",
+            "15:00",
+            "16:15",
+            "17:30"
+        ],
+        "Ubicación": "Cruce de Calle del Alba con Avda. del Sol",
+        "Locaciones_Cercanas": [
+            "Calle del Alba Dagobah",
+            "Avda. del Sol Rebelde",
+            "Parque del Sol Alderaan",
+            "Tienda de Joyería Bespin"
+        ]
+    },
+    {
+        "Distrito": "Dagobah Este",
+        "Línea": "DGE404",
+        "Paradero": "PAR493",
+        "Horario": [
+            "06:20",
+            "07:35",
+            "08:50",
+            "10:05",
+            "11:20",
+            "12:35",
+            "13:50",
+            "15:05",
+            "16:20",
+            "17:35"
+        ],
+        "Ubicación": "Frente al Gran Lago de Dagobah",
+        "Locaciones_Cercanas": [
+            "Gran Lago de Dagobah",
+            "Tienda de Componentes Droides",
+            "Parque de los Lagos Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Dagobah Este",
+        "Línea": "DGE404",
+        "Paradero": "PAR826",
+        "Horario": [
+            "06:25",
+            "07:40",
+            "08:55",
+            "10:10",
+            "11:25",
+            "12:40",
+            "13:55",
+            "15:10",
+            "16:25",
+            "17:40"
+        ],
+        "Ubicación": "Cruce de Calle del Sabio con Avda. del Comercio",
+        "Locaciones_Cercanas": [
+            "Calle del Sabio Sith",
+            "Avda. del Comercio Rebelde",
+            "Tienda de Armas Imperial",
+            "Cantina de la Mañana Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Dagobah Este",
+        "Línea": "DGE404",
+        "Paradero": "PAR275",
+        "Horario": [
+            "06:30",
+            "07:45",
+            "09:00",
+            "10:15",
+            "11:30",
+            "12:45",
+            "14:00",
+            "15:15",
+            "16:30",
+            "17:45"
+        ],
+        "Ubicación": "Frente al Gran Templo del Saber",
+        "Locaciones_Cercanas": [
+            "Gran Templo del Saber Jedi",
+            "Tienda de Componentes Droides",
+            "Parque del Saber Dagobah",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Dagobah Este",
+        "Línea": "DGE404",
+        "Paradero": "PAR614",
+        "Horario": [
+            "06:35",
+            "07:50",
+            "09:05",
+            "10:20",
+            "11:35",
+            "12:50",
+            "14:05",
+            "15:20",
+            "16:35",
+            "17:50"
+        ],
+        "Ubicación": "Cruce de Calle del Alba con Avda. del Sol",
+        "Locaciones_Cercanas": [
+            "Calle del Alba Dagobah",
+            "Avda. del Sol Rebelde",
+            "Parque del Sol Alderaan",
+            "Tienda de Joyería Bespin"
+        ]
+    },
+    {
+        "Distrito": "Dagobah Este",
+        "Línea": "DGE404",
+        "Paradero": "PAR917",
+        "Horario": [
+            "06:40",
+            "07:55",
+            "09:10",
+            "10:25",
+            "11:40",
+            "12:55",
+            "14:10",
+            "15:25",
+            "16:40",
+            "17:55"
+        ],
+        "Ubicación": "Frente al Gran Lago de Dagobah",
+        "Locaciones_Cercanas": [
+            "Gran Lago de Dagobah",
+            "Tienda de Componentes Droides",
+            "Parque de los Lagos Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Dagobah Este",
+        "Línea": "DGE404",
+        "Paradero": "PAR354",
+        "Horario": [
+            "06:45",
+            "08:00",
+            "09:15",
+            "10:30",
+            "11:45",
+            "13:00",
+            "14:15",
+            "15:30",
+            "16:45",
+            "18:00"
+        ],
+        "Ubicación": "Frente al Gran Estadio de Combate de Geonosis",
+        "Locaciones_Cercanas": [
+            "Gran Estadio de Combate de Geonosis",
+            "Tienda de Componentes Droides",
+            "Parque del Estadio Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Dagobah Este",
+        "Línea": "DGE404",
+        "Paradero": "PAR269",
+        "Horario": [
+            "06:50",
+            "08:05",
+            "09:20",
+            "10:35",
+            "11:50",
+            "13:05",
+            "14:20",
+            "15:35",
+            "16:50",
+            "18:05"
+        ],
+        "Ubicación": "Cruce de Calle del Sabio con Avda. del Comercio",
+        "Locaciones_Cercanas": [
+            "Calle del Sabio Sith",
+            "Avda. del Comercio Rebelde",
+            "Tienda de Armas Imperial",
+            "Cantina de la Mañana Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Dagobah Este",
+        "Línea": "DGE404",
+        "Paradero": "PAR846",
+        "Horario": [
+            "06:55",
+            "08:10",
+            "09:25",
+            "10:40",
+            "11:55",
+            "13:10",
+            "14:25",
+            "15:40",
+            "16:55",
+            "18:10"
+        ],
+        "Ubicación": "Frente al Gran Estadio de Combate de Geonosis",
+        "Locaciones_Cercanas": [
+            "Gran Estadio de Combate de Geonosis",
+            "Tienda de Componentes Droides",
+            "Parque del Estadio Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Kamino Este",
+        "Línea": "KME1919",
+        "Paradero": "PAR219",
+        "Horario": [
+            "06:40",
+            "07:55",
+            "09:10",
+            "10:25",
+            "11:40",
+            "12:55",
+            "14:10",
+            "15:25",
+            "16:40",
+            "17:55"
+        ],
+        "Ubicación": "Cruce de Calle del Sabio con Avda. del Comercio",
+        "Locaciones_Cercanas": [
+            "Calle del Sabio Sith",
+            "Avda. del Comercio Rebelde",
+            "Tienda de Armas Imperial",
+            "Cantina de la Mañana Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Kamino Este",
+        "Línea": "KME1919",
+        "Paradero": "PAR985",
+        "Horario": [
+            "06:45",
+            "08:00",
+            "09:15",
+            "10:30",
+            "11:45",
+            "13:00",
+            "14:15",
+            "15:30",
+            "16:45",
+            "18:00"
+        ],
+        "Ubicación": "Frente al Gran Hospital de Kamino",
+        "Locaciones_Cercanas": [
+            "Gran Hospital de Kamino",
+            "Tienda de Medicinas Coruscant",
+            "Parque del Hospital Kamino",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Kamino Este",
+        "Línea": "KME1919",
+        "Paradero": "PAR753",
+        "Horario": [
+            "06:50",
+            "08:05",
+            "09:20",
+            "10:35",
+            "11:50",
+            "13:05",
+            "14:20",
+            "15:35",
+            "16:50",
+            "18:05"
+        ],
+        "Ubicación": "Cruce de Calle del Alba con Avda. del Sol",
+        "Locaciones_Cercanas": [
+            "Calle del Alba Dagobah",
+            "Avda. del Sol Rebelde",
+            "Parque del Sol Alderaan",
+            "Tienda de Joyería Bespin"
+        ]
+    },
+    {
+        "Distrito": "Kamino Este",
+        "Línea": "KME1919",
+        "Paradero": "PAR462",
+        "Horario": [
+            "06:55",
+            "08:10",
+            "09:25",
+            "10:40",
+            "11:55",
+            "13:10",
+            "14:25",
+            "15:40",
+            "16:55",
+            "18:10"
+        ],
+        "Ubicación": "Frente al Gran Hospital de Kamino",
+        "Locaciones_Cercanas": [
+            "Gran Hospital de Kamino",
+            "Tienda de Medicinas Coruscant",
+            "Parque del Hospital Kamino",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Mustafar Oeste",
+        "Línea": "MWO2222",
+        "Paradero": "PAR985",
+        "Horario": [
+            "06:10",
+            "07:25",
+            "08:40",
+            "09:55",
+            "11:10",
+            "12:25",
+            "13:40",
+            "14:55",
+            "16:10",
+            "17:25"
+        ],
+        "Ubicación": "Cruce de Calle del Sabio con Avda. del Comercio",
+        "Locaciones_Cercanas": [
+            "Calle del Sabio Sith",
+            "Avda. del Comercio Rebelde",
+            "Tienda de Armas Imperial",
+            "Cantina de la Mañana Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Mustafar Oeste",
+        "Línea": "MWO2222",
+        "Paradero": "PAR132",
+        "Horario": [
+            "06:15",
+            "07:30",
+            "08:45",
+            "10:00",
+            "11:15",
+            "12:30",
+            "13:45",
+            "15:00",
+            "16:15",
+            "17:30"
+        ],
+        "Ubicación": "Frente al Gran Lago de Mustafar",
+        "Locaciones_Cercanas": [
+            "Gran Lago de Mustafar",
+            "Tienda de Componentes Droides",
+            "Parque de los Lagos Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Mustafar Oeste",
+        "Línea": "MWO2222",
+        "Paradero": "PAR749",
+        "Horario": [
+            "06:20",
+            "07:35",
+            "08:50",
+            "10:05",
+            "11:20",
+            "12:35",
+            "13:50",
+            "15:05",
+            "16:20",
+            "17:35"
+        ],
+        "Ubicación": "Cruce de Calle del Alba con Avda. del Sol",
+        "Locaciones_Cercanas": [
+            "Calle del Alba Dagobah",
+            "Avda. del Sol Rebelde",
+            "Parque del Sol Alderaan",
+            "Tienda de Joyería Bespin"
+        ]
+    },
+    {
+        "Distrito": "Mustafar Oeste",
+        "Línea": "MWO2222",
+        "Paradero": "PAR526",
+        "Horario": [
+            "06:25",
+            "07:40",
+            "08:55",
+            "10:10",
+            "11:25",
+            "12:40",
+            "13:55",
+            "15:10",
+            "16:25",
+            "17:40"
+        ],
+        "Ubicación": "Frente al Gran Lago de Mustafar",
+        "Locaciones_Cercanas": [
+            "Gran Lago de Mustafar",
+            "Tienda de Componentes Droides",
+            "Parque de los Lagos Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Mustafar Oeste",
+        "Línea": "MWO2222",
+        "Paradero": "PAR817",
+        "Horario": [
+            "06:30",
+            "07:45",
+            "09:00",
+            "10:15",
+            "11:30",
+            "12:45",
+            "14:00",
+            "15:15",
+            "16:30",
+            "17:45"
+        ],
+        "Ubicación": "Cruce de Calle del Sabio con Avda. del Comercio",
+        "Locaciones_Cercanas": [
+            "Calle del Sabio Sith",
+            "Avda. del Comercio Rebelde",
+            "Tienda de Armas Imperial",
+            "Cantina de la Mañana Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Mustafar Oeste",
+        "Línea": "MWO2222",
+        "Paradero": "PAR433",
+        "Horario": [
+            "06:35",
+            "07:50",
+            "09:05",
+            "10:20",
+            "11:35",
+            "12:50",
+            "14:05",
+            "15:20",
+            "16:35",
+            "17:50"
+        ],
+        "Ubicación": "Frente al Gran Lago de Mustafar",
+        "Locaciones_Cercanas": [
+            "Gran Lago de Mustafar",
+            "Tienda de Componentes Droides",
+            "Parque de los Lagos Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Mustafar Oeste",
+        "Línea": "MWO2222",
+        "Paradero": "PAR654",
+        "Horario": [
+            "06:40",
+            "07:55",
+            "09:10",
+            "10:25",
+            "11:40",
+            "12:55",
+            "14:10",
+            "15:25",
+            "16:40",
+            "17:55"
+        ],
+        "Ubicación": "Cruce de Calle del Alba con Avda. del Sol",
+        "Locaciones_Cercanas": [
+            "Calle del Alba Dagobah",
+            "Avda. del Sol Rebelde",
+            "Parque del Sol Alderaan",
+            "Tienda de Joyería Bespin"
+        ]
+    },
+    {
+        "Distrito": "Mustafar Oeste",
+        "Línea": "MWO2222",
+        "Paradero": "PAR293",
+        "Horario": [
+            "06:45",
+            "08:00",
+            "09:15",
+            "10:30",
+            "11:45",
+            "13:00",
+            "14:15",
+            "15:30",
+            "16:45",
+            "18:00"
+        ],
+        "Ubicación": "Frente al Gran Lago de Mustafar",
+        "Locaciones_Cercanas": [
+            "Gran Lago de Mustafar",
+            "Tienda de Componentes Droides",
+            "Parque de los Lagos Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Mustafar Oeste",
+        "Línea": "MWO2222",
+        "Paradero": "PAR938",
+        "Horario": [
+            "06:50",
+            "08:05",
+            "09:20",
+            "10:35",
+            "11:50",
+            "13:05",
+            "14:20",
+            "15:35",
+            "16:50",
+            "18:05"
+        ],
+        "Ubicación": "Cruce de Calle del Sabio con Avda. del Comercio",
+        "Locaciones_Cercanas": [
+            "Calle del Sabio Sith",
+            "Avda. del Comercio Rebelde",
+            "Tienda de Armas Imperial",
+            "Cantina de la Mañana Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Mustafar Oeste",
+        "Línea": "MWO2222",
+        "Paradero": "PAR421",
+        "Horario": [
+            "06:55",
+            "08:10",
+            "09:25",
+            "10:40",
+            "11:55",
+            "13:10",
+            "14:25",
+            "15:40",
+            "16:55",
+            "18:10"
+        ],
+        "Ubicación": "Frente al Gran Lago de Mustafar",
+        "Locaciones_Cercanas": [
+            "Gran Lago de Mustafar",
+            "Tienda de Componentes Droides",
+            "Parque de los Lagos Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Kashyyyk Central",
+        "Línea": "KCC2525",
+        "Paradero": "PAR672",
+        "Horario": [
+            "06:05",
+            "07:20",
+            "08:35",
+            "09:50",
+            "11:05",
+            "12:20",
+            "13:35",
+            "14:50",
+            "16:05",
+            "17:20"
+        ],
+        "Ubicación": "Cruce de Calle del Sabio con Avda. del Comercio",
+        "Locaciones_Cercanas": [
+            "Calle del Sabio Sith",
+            "Avda. del Comercio Rebelde",
+            "Tienda de Armas Imperial",
+            "Cantina de la Mañana Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Kashyyyk Central",
+        "Línea": "KCC2525",
+        "Paradero": "PAR935",
+        "Horario": [
+            "06:10",
+            "07:25",
+            "08:40",
+            "09:55",
+            "11:10",
+            "12:25",
+            "13:40",
+            "14:55",
+            "16:10",
+            "17:25"
+        ],
+        "Ubicación": "Frente al Gran Templo de Kashyyyk",
+        "Locaciones_Cercanas": [
+            "Gran Templo de Kashyyyk Jedi",
+            "Tienda de Componentes Droides",
+            "Parque del Templo Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Kashyyyk Central",
+        "Línea": "KCC2525",
+        "Paradero": "PAR148",
+        "Horario": [
+            "06:15",
+            "07:30",
+            "08:45",
+            "10:00",
+            "11:15",
+            "12:30",
+            "13:45",
+            "15:00",
+            "16:15",
+            "17:30"
+        ],
+        "Ubicación": "Cruce de Calle del Alba con Avda. del Sol",
+        "Locaciones_Cercanas": [
+            "Calle del Alba Dagobah",
+            "Avda. del Sol Rebelde",
+            "Parque del Sol Alderaan",
+            "Tienda de Joyería Bespin"
+        ]
+    },
+    {
+        "Distrito": "Kashyyyk Central",
+        "Línea": "KCC2525",
+        "Paradero": "PAR627",
+        "Horario": [
+            "06:20",
+            "07:35",
+            "08:50",
+            "10:05",
+            "11:20",
+            "12:35",
+            "13:50",
+            "15:05",
+            "16:20",
+            "17:35"
+        ],
+        "Ubicación": "Frente al Gran Templo de Kashyyyk",
+        "Locaciones_Cercanas": [
+            "Gran Templo de Kashyyyk Jedi",
+            "Tienda de Componentes Droides",
+            "Parque del Templo Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Kashyyyk Central",
+        "Línea": "KCC2525",
+        "Paradero": "PAR853",
+        "Horario": [
+            "06:25",
+            "07:40",
+            "08:55",
+            "10:10",
+            "11:25",
+            "12:40",
+            "13:55",
+            "15:10",
+            "16:25",
+            "17:40"
+        ],
+        "Ubicación": "Cruce de Calle del Sabio con Avda. del Comercio",
+        "Locaciones_Cercanas": [
+            "Calle del Sabio Sith",
+            "Avda. del Comercio Rebelde",
+            "Tienda de Armas Imperial",
+            "Cantina de la Mañana Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Kashyyyk Central",
+        "Línea": "KCC2525",
+        "Paradero": "PAR394",
+        "Horario": [
+            "06:30",
+            "07:45",
+            "09:00",
+            "10:15",
+            "11:30",
+            "12:45",
+            "14:00",
+            "15:15",
+            "16:30",
+            "17:45"
+        ],
+        "Ubicación": "Frente al Gran Mercado de Kashyyyk",
+        "Locaciones_Cercanas": [
+            "Gran Mercado de Kashyyyk",
+            "Tienda de Mercancías Coruscant",
+            "Parque del Mercado Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Kashyyyk Central",
+        "Línea": "KCC2525",
+        "Paradero": "PAR219",
+        "Horario": [
+            "06:35",
+            "07:50",
+            "09:05",
+            "10:20",
+            "11:35",
+            "12:50",
+            "14:05",
+            "15:20",
+            "16:35",
+            "17:50"
+        ],
+        "Ubicación": "Cruce de Calle del Alba con Avda. del Sol",
+        "Locaciones_Cercanas": [
+            "Calle del Alba Dagobah",
+            "Avda. del Sol Rebelde",
+            "Parque del Sol Alderaan",
+            "Tienda de Joyería Bespin"
+        ]
+    },
+    {
+        "Distrito": "Kashyyyk Central",
+        "Línea": "KCC2525",
+        "Paradero": "PAR986",
+        "Horario": [
+            "06:40",
+            "07:55",
+            "09:10",
+            "10:25",
+            "11:40",
+            "12:55",
+            "14:10",
+            "15:25",
+            "16:40",
+            "17:55"
+        ],
+        "Ubicación": "Frente al Gran Templo de Kashyyyk",
+        "Locaciones_Cercanas": [
+            "Gran Templo de Kashyyyk Jedi",
+            "Tienda de Componentes Droides",
+            "Parque del Templo Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Kashyyyk Central",
+        "Línea": "KCC2525",
+        "Paradero": "PAR753",
+        "Horario": [
+            "06:45",
+            "08:00",
+            "09:15",
+            "10:30",
+            "11:45",
+            "13:00",
+            "14:15",
+            "15:30",
+            "16:45",
+            "18:00"
+        ],
+        "Ubicación": "Cruce de Calle del Sabio con Avda. del Comercio",
+        "Locaciones_Cercanas": [
+            "Calle del Sabio Sith",
+            "Avda. del Comercio Rebelde",
+            "Tienda de Armas Imperial",
+            "Cantina de la Mañana Tatooine"
+        ]
+    },
+    {
+        "Distrito": "Kashyyyk Central",
+        "Línea": "KCC2525",
+        "Paradero": "PAR462",
+        "Horario": [
+            "06:50",
+            "08:05",
+            "09:20",
+            "10:35",
+            "11:50",
+            "13:05",
+            "14:20",
+            "15:35",
+            "16:50",
+            "18:05"
+        ],
+        "Ubicación": "Frente al Gran Mercado de Kashyyyk",
+        "Locaciones_Cercanas": [
+            "Gran Mercado de Kashyyyk",
+            "Tienda de Mercancías Coruscant",
+            "Parque del Mercado Geonosis",
+            "Cantina de la Tarde Tatooine"
+        ]
+    }
+]

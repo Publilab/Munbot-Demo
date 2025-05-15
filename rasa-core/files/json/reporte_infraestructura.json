@@ -1,0 +1,102 @@
+[
+    {
+        "Categoria": "Mantenimiento Urbano",
+        "Problemas": [
+            {
+                "Tipo": "Alumbrado Publico",
+                "Incidente": "Luminarias defectuosas",
+                "Estado": "En reparación",
+                "Prioridad": "Alta",
+                "Distrito": "Naboo Norte",
+                "Ubicacion": "Cruce de Calle del Rey con Avenida Jedi",
+                "Ultima_Actualizacion": "2024-12-22T08:00:00Z"
+            },
+            {
+                "Tipo": "Parques y Plazas",
+                "Incidente": "Banco dañado en la plaza principal",
+                "Estado": "Pendiente de inspección",
+                "Prioridad": "Media",
+                "Distrito": "Tatooine Sur",
+                "Ubicacion": "Parque de la Paz, sector norte",
+                "Ultima_Actualizacion": "2024-12-22T07:45:00Z"
+            },
+            {
+                "Tipo": "Alumbrado Publico",
+                "Incidente": "Luminarias defectuosas",
+                "Estado": "Pendiente de revisión",
+                "Prioridad": "Media",
+                "Distrito": "Dagobah Este",
+                "Ubicacion": "Avenida del Alba, sector central",
+                "Ultima_Actualizacion": "2024-12-22T07:30:00Z"
+            },
+            {
+                "Tipo": "Parques y Plazas",
+                "Incidente": "Árbol caído obstruyendo sendero",
+                "Estado": "Reparación en progreso",
+                "Prioridad": "Alta",
+                "Distrito": "Hoth Oeste",
+                "Ubicacion": "Parque Glacial, entrada este",
+                "Ultima_Actualizacion": "2024-12-22T07:25:00Z"
+            },
+            {
+                "Tipo": "Alumbrado Publico",
+                "Incidente": "Farola destruida por tormenta",
+                "Estado": "En evaluación",
+                "Prioridad": "Alta",
+                "Distrito": "Kamino Este",
+                "Ubicacion": "Plaza Acuática Central",
+                "Ultima_Actualizacion": "2024-12-22T07:20:00Z"
+            }
+        ]
+    },
+    {
+        "Categoria": "Infraestructura Vial",
+        "Problemas": [
+            {
+                "Tipo": "Baches",
+                "Incidente": "Hueco considerable en la vía",
+                "Estado": "En espera de maquinaria",
+                "Prioridad": "Alta",
+                "Distrito": "Bespin Norte",
+                "Ubicacion": "Calle del Comercio, sector central",
+                "Ultima_Actualizacion": "2024-12-22T08:15:00Z"
+            },
+            {
+                "Tipo": "Semaforos",
+                "Incidente": "Semáforo fuera de servicio",
+                "Estado": "Reparación en curso",
+                "Prioridad": "Alta",
+                "Distrito": "Kamino Este",
+                "Ubicacion": "Avenida del Alba, intersección con Calle de la Paz",
+                "Ultima_Actualizacion": "2024-12-22T08:10:00Z"
+            },
+            {
+                "Tipo": "Carreteras Magnéticas",
+                "Incidente": "Vía inhabilitada por mantenimiento",
+                "Estado": "En progreso",
+                "Prioridad": "Media",
+                "Distrito": "Hoth Oeste",
+                "Ubicacion": "Carretera Magna 7, acceso norte",
+                "Ultima_Actualizacion": "2024-12-22T07:50:00Z"
+            },
+            {
+                "Tipo": "Baches",
+                "Incidente": "Pequeño agujero causado por deslizamiento",
+                "Estado": "Inspección requerida",
+                "Prioridad": "Baja",
+                "Distrito": "Endor Central",
+                "Ubicacion": "Calle del Alba, sector este",
+                "Ultima_Actualizacion": "2024-12-22T07:40:00Z"
+            },
+            {
+                "Tipo": "Semaforos",
+                "Incidente": "Luces intermitentes en cruce principal",
+                "Estado": "Pendiente de inspección",
+                "Prioridad": "Media",
+                "Distrito": "Geonosis Sur",
+                "Ubicacion": "Avenida Principal, intersección con Calle Oscura",
+                "Ultima_Actualizacion": "2024-12-22T07:35:00Z"
+            }
+        ]
+    }
+]

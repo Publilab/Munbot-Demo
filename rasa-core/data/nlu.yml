@@ -1,0 +1,1785 @@
+version: "3.1"
+nlu:
+    ### SALUDOS
+  - intent: saludo_simple
+    examples: |
+      - Hola
+      - Buen día
+      - Buenas tardes
+      - Buenas noches
+      - Quiubo
+      - Hola, Buen día
+      - Hola, Buenas tardes
+      - Hola, Buenas noches
+      - hola hay alguien por ahi
+      - hi
+      - hola
+      - hello
+
+  - intent: saludo_compuesto
+    examples: |
+      - Hola ¿cómo estás?
+      - Hola ¿qué tal?
+      - Qué tal
+      - hola que tal
+      - ke tal
+      - hola ke tal
+      - Hola ¿cómo te va?
+      - Hola ¿qué hay de nuevo?
+      - Hola ¿qué cuentas?
+      - Hola, ¿qué tal todo?
+      - Hola, ¿cómo te encuentras?
+      - hola como estas
+      - hola como te va
+      - hola komo estay
+      - hola como estay
+      - hola como estai
+      - hola como te encuentras
+      - hola que cuentas
+      - hola k cuentas
+      - hola que cuentas
+      - hola que hay de nuevo
+      - hola que tal va la vida
+      - Hola, qué tal va la vida
+      
+    ### PREGUNTAS FAQ
+  - intent: faq_funcion_munbot
+    examples: |
+      - ¿Qué haces?
+      - Para que estas hecho
+      - para qué estas hecho?
+      - Para qué estás diseñado?
+      - ¿Cuál es tu función?
+      - ¿Para qué sirves?
+      - para que sirves?
+      - para que sirves
+      - En que puedes ayudarme?
+      - Cual es tu gracia, munbot?
+      - Que tareas puedes hacer
+      - ke tareas puedes hacer
+      - ¿Qué puedes hacer?
+      - Ke puedes hacer
+      - ¿Qué haces en este chat?
+      - ¿A qué te dedicas?
+      - ¿Cuál es tu trabajo?
+      - ¿Para qué te diseñaron?
+
+  - intent: faq_disponibilidad
+    examples: |
+      - ¿A qué horas estás disponible?
+      - a que hora estas disponible
+      - ¿A qué hora puedo encontrarte?
+      - a que hora puedo encontrarte
+      - ¿Cuándo estás en línea?
+      - ¿Cuál es tu horario de atención?
+      - ¿Cuándo puedo encontrarte?
+      - ¿Cuándo puedo hablar contigo?
+      - ¿Cuándo estás disponible para ayudarme?
+      - ¿Cuándo puedo contactarte?
+      - ¿Cuándo puedo hablar con un agente?
+      - ¿Puedo hablar contigo en cualquier momento?
+      - ¿Estás disponible las 24 horas?
+      - ¿Puedo hablar contigo en cualquier momento del día?
+
+  - intent: faq_idiomas
+    examples: |
+      - ¿En qué idiomas hablas?
+      - ¿Hablas inglés?
+      - ¿Puedes comunicarte en español?
+      - ¿Hablas otros idiomas?
+      - ¿En qué idiomas puedes responder?
+      - ¿Puedes hablar en francés?
+      - ¿Hablas en alemán?
+      - ¿Puedes responder en portugués?
+      - ¿Hablas en italiano?
+      - ¿Puedes responder en chino?
+      - ke idiomas hablas
+      - que idiomas hablas
+      - puedes hablar en español
+      - cuantos idiomas hablas
+      - puedes hablar en frances
+      - hablas otros idiomas
+      - puedes hablar en otras lenguas
+      - cuantos idiomas hablas?
+      - que idiomas hablas?
+
+  - intent: faq_privacidad
+    examples: |
+      - ¿Cómo proteges mis datos?
+      - ¿Cómo proteges la privacidad demis datos?
+      - ¿Cómo proteges mis datos personales?
+      - ¿Cómo manejo mis datos?
+      - ¿Cómo se protegen mis datos?
+      - ¿Cómo se manejan mis datos?
+      - ¿Qué haces con mis datos?
+      - ¿Cómo se maneja mi privacidad?
+      - ¿Qué haces con mis datos personales?
+      - ¿Cómo proteges mi información personal?
+      - ¿Es seguro hablar contigo?
+      - ¿Qué haces con mis datos de contacto?
+      - ¿Están seguros mis datos contigo?
+      - ¿Cómo proteges mi privacidad?
+      - ¿Puedo confiar en ti?
+
+  - intent: faq_ubicacion
+    examples: |
+      - ¿Dónde estás ubicado?
+      - ¿Dónde está tu oficina?
+      - ¿Dónde puedo encontrarte?
+      - ¿Dónde trabajas?
+      - ¿Dónde puedo ir a verte?
+
+  - intent: faq_contacto_humano
+    examples: |
+      - ¿Cómo puedo contactar a un humano?
+      - ¿Hay alguien que pueda ayudarme directamente?
+      - ¿Puedo hablar con un agente?
+      - ¿Cómo puedo hablar con una persona?
+      - Me gustaría hablar con un humano ¿Hay alguien que pueda responderme?
+      - ¿Cómo puedo hablar con un funcionario público?
+      - ¿Puedo hablar con un funcionario?
+
+  - intent: faq_alcance_demo
+    examples: |
+      - ¿Qué funcionalidades incluye este demo?
+      - ¿Qué funcionalidades tiene este demo?
+      - ¿Qué funcionalidades tiene este chatbot?
+      - ¿Qué puede hacer este chatbot?
+      - ¿Qué servicios ofrece este chatbot?
+      - ¿Qué servicios ofreces?
+      - ¿Qué puedes hacer?
+      - ¿Qué servicios ofreces?
+      - ¿Para qué estás hecho?
+      - ¿Para qué estás programado?
+      - ¿Para qué estás hecho?
+      - ¿Para qué estás programado?
+  
+  - intent: faq_tecnologias
+    examples: |
+      - ¿Con qué tecnología está construido MunBoT?
+      - ¿Con qué tecnología está construido el chatbot?
+      - ¿Qué tecnología usas?
+      - ¿Qué plataformas emplea MunBoT?
+      - ¿Qué plataformas empleas?
+
+  - intent: faq_integraciones
+    examples: |
+      - ¿Con qué herramientas puedes integrarte?
+      - ¿Con qué sistemas puedes integrarte?
+      - ¿Con qué sistema se puede integrar MunBoT?
+      - ¿Con qué sistema se puede integrar el chatbot?
+      - ¿Puedes conectarse a mi CRM o ERP municipal?
+      - ¿Qué APIs externas admites?
+      - ¿Qué APIs externas puedes integrar?
+
+  - intent: faq_seguridad_datos
+    examples: |
+      - ¿Cómo proteges mi información?
+      - ¿Qué haces con mis datos?
+      - ¿Cómo se maneja mi privacidad?
+      - ¿Qué haces con mis datos personales?
+      - ¿Cómo proteges mi información personal?
+      - ¿Es seguro hablar contigo?
+      - ¿Qué haces con mis datos de contacto?
+      - ¿Están seguros mis datos contigo?
+      - ¿Cómo proteges mi privacidad?
+      - ¿Puedo confiar en ti?
+      - ¿Cómo proteges mi privacidad?
+      - ¿Puedo confiar en ti?
+
+  - intent: faq_hoja_ruta
+    examples: |
+      - ¿Qué nuevas funciones se agregarán en el futuro?
+      - ¿Cuál es la hoja de ruta de desarrollo de MunBoT?
+      - ¿Qué viene después de este demo?
+
+  - intent: faq_feedback
+    examples: |
+      - ¿Cómo puedo reportar errores o sugerencias?
+      - ¿Dónde hago comentarios sobre el bot?
+      - ¿Puedo enviar feedback a los desarrolladores?
+
+  - intent: faq_contacto_comercial
+    examples: |
+      - ¿Cómo contrato este servicio para mi municipalidad?
+      - ¿A quién contacto para adquirir MunBoT?
+      - ¿Cuál es el precio de la solución completa?
+
+  - intent: faq_costos
+    examples: |
+      - ¿Cuánto cuesta MunBoT?
+      - ¿Hay una versión gratuita?
+      - ¿Cuál es el modelo de licenciamiento?
+
+  ### PREGUNTAR CHATBOT  
+  - intent: pregunta_como_estas
+    examples: |
+      - ¿Cómo estás?
+      - ¿Como estas?
+      - como estás?
+      - como estas?
+      - como te encuentras?
+      - ¿como te encuentras?
+      - ¿Cómo te encuentras?
+      - ¿Qué tal te va?
+      - ¿que tal te va?
+      - que tal te va
+      - ¿Qué tal estás?
+      - ¿que tal estas? 
+      - que tal estas
+      - como andas
+      - ¿Cómo andas?
+      - ¿Cómo te sientes?
+      - ¿Cómo te sientes hoy?
+      - ¿Cómo te sientes ahora?
+      - ¿Cómo te sientes en este momento?
+      - que tal la vida
+      - Qué tal la vida?
+      - ¿Cómo va todo?
+
+  - intent: respuesta_bien
+    examples: |
+      - Bien
+      - Muy bien
+      - bien
+      - De maravillas
+      - Muy bien, gracias por preguntar
+      - excelente
+      - Estoy bien
+      - Todo bien
+      - Me encuentro bien
+      - Estoy de maravilla
+      - Todo en orden
+      - Perfecto
+      - Muy bien, gracias
+      - Genial
+      - Estoy bien, gracias
+  
+  - intent: respuesta_mal
+    examples: |
+      - Mal
+      - Pésimo
+      - pesimo
+      - horrible
+      - No lo he pasado bien
+      - No estoy bien
+      - Me siento mal
+      - No me encuentro bien
+      - Estoy mal
+      - Mas o menos
+      - más o menos no más
+      - podría estar mejor
+
+  - intent: pregunta_que_hora
+    examples: |
+      - Que hora es?
+      - ¿Qué hora es?
+      - Ke hora es?
+      - K ora es
+      - Que hora es
+      - Dime la hora
+      - Me puedes decir la hora
+      - ¿Tienes la hora?
+      - ¿Cuál es la hora?
+      - Me puedes decir qué hora es?
+      - ¿Sabes qué hora es?
+      - Necesito saber la hora
+      - Por favor, dime la hora
+
+  - intent: pregunta_fecha
+    examples: |
+      - ¿Qué fecha es hoy?
+      - que fecha es hoy
+      - k fecha es hoy
+      - ¿Cuál es la fecha actual?
+      - ¿Me puedes decir la fecha?
+      - ¿Qué día es hoy?
+      - Que fecha es
+      - Dime la fecha
+
+  ### INTERACCIONES CLASICAS
+  - intent: decepcion_ayuda
+    examples: |
+      - No me ayudaste
+      - No me diste la información que necesitaba
+      - No me solucionaste nada
+      - No me diste la respuesta correcta
+      - No me ayudaste en nada
+      - No era lo que buscaba
+      - No me sirvió tu ayuda
+      - No resolviste mi problema
+      - No me diste la solución que necesitaba
+      - No me sirvió para nada
+      - no me fuiste de ayuda
+      - no fuiste util
+      - no fuiste útil
+
+  - intent: agradecimiento
+    examples: |
+      - Gracias
+      - gracias
+      - Muchas gracias
+      - Gracias por tu ayuda
+      - Gracias por la información
+      - Gracias, que la Fuerza te acompañe
+      - Te pasaste, gracias
+      - Gracias por todo
+      - Gracias te pasaste
+
+  - intent: no_mas_ayuda
+    examples: |
+      - No
+      - No, muchas gracias
+      - No, no necesito más ayuda
+      - No necesito más ayuda
+      - No necesito más información
+      - No tengo más preguntas
+      - No necesito que me ayudes
+      - No, muchas gracias
+      - No, gracias
+      - No gracias
+      - No muchas gracias
+      - No, estoy bien
+      - en nada más
+      - en nada mas
+      - absolutamente en nada
+      - no dejemoslo hasta aqui
+
+  - intent: si_mas_ayuda
+    examples: |
+      - Sí
+      - Sí, por favor
+      - Sí, necesito más ayuda
+      - Sí, necesito más información
+      - Si, tengo más preguntas
+      - Sí, claro necesito que me ayudes en otra cosa
+      - Sí, muchas gracias
+      - Sí, por favor. Necesito más ayuda
+      - ok
+      - okei
+      - claro
+      - por supuesto
+      - obvio
+      - si por favor
+      - si necesito mas ayuda
+      - si necesito mas informacion
+      - si tengo mas preguntas
+      - si necesito que me ayudes
+      - si necesito que me ayudes en otra cosa
+      - si muchas gracias
+      - si por favor necesito mas ayuda
+      - si por favor necesito mas informacion
+      - si por favor tengo mas preguntas
+      - si por favor necesito que me ayudes
+      - si necesito mas ayuda
+      - si necesito mas informacion
+      - si necesito que me ayudes
+      - si, necesito más ayuda
+      - si, necesito más información
+      - si, tengo más preguntas
+      - si, claro necesito que me ayudes en otra cosa
+
+  - intent: espera_un_poco
+    examples: |
+      - Espera un poco
+      - Espera un momento
+      - Espera un instante
+      - Espera un segundo
+      - Espera un ratito
+      - Espera un rato
+      - Espera un poquito
+      - One moment
+      - One second
+      - guan moment
+      - guan second
+
+  - intent: despedida
+    examples: |
+      - Chao y gracias por tu ayuda
+      - Eso es todo por ahora
+      - Nos vemos
+      - Adiós
+      - Hasta luego
+      - Gracias, adiós
+      - Chao
+      - Adios
+      - bye
+      - chao
+      - adio
+      - adios
+      - see you later
+      - Que la Fuerza te acompañe
+      - Gracias, adiós
+      - Gracias, hasta luego
+      - Gracias, nos vemos
+      - Gracias, chao
+      - adios munbot, muchas gracias
+      - adios munbot muchas gracias por todo
+      - chao que te vaya bien
+      - adios muchas gracias
+      - adios muchas gracias por todo
+  
+  - intent: cambio_tema
+    examples: |
+      - Quiero hacerte otra consulta
+      - puedo hacerte otra consulta
+      - quiero preguntar otra cosa
+      - Quiero hacerte otra pregunta
+      - quiero hacerte otra pregunta
+      - puedo hacerte otra pregunta
+      - puedo hacerte otra solicitud
+      - Quiero cambiar de tema
+      - cambiemos de tema
+      - cambiemos de asunto
+      - quiero hablar de otra cosa
+      - quiero cambiar de tema
+      - quiero cambiar de asunto
+      - cambiemos de conversación
+      - cambiemos de tópico
+      - quiero hablar de algo más
+      - quiero hablar de otra cosa
+
+  ### CONSULTAS GENERALES DOCUMENTOS
+  - intent: consulta_general
+    examples: |
+      - Quiero hacer una consulta
+      - Tengo un problema y necesito ayuda
+      - Necesito ayuda con un tema
+      - quiero consultarte algo
+      - me gustaria hacer una consulta
+      - quiero hacer una consultita
+      - ¿Podrías ayudarme con una consulta?
+      - Necesito que me asesores en algo
+      - Necesito ayuda con un tema
+      - ¿Podrías atender mi consulta?
+      - Quisiera plantear una pregunta
+      - Me gustaría recibir ayuda sobre un tema
+  
+  - intent: no_sabe_tipo_documento
+    examples: |
+      - No sé qué tipo de documento es
+      - No sé qué tipo de documento necesito
+      - No sé qué tipo de documento quiero
+      - No sé
+      - no se
+      - nose
+      - No tengo idea
+      - No tengo claro qué tipo de documento necesito
+      - No tengo claro qué tipo de documento quiero
+      - no se muy bien
+      - no se muy bien que necesito
+      - no lo tengo claro
+      - no lo tengo muy claro
+
+  - intent: solicitud_documento_general
+    examples: |
+      - Necesito un documento
+      - ¿Cómo obtengo un documento?
+      - ¿Dónde puedo obtener un documento?
+      - ¿Cómo solicito un documento?
+      - ¿Dónde puedo solicitar un documento?
+      - ¿Cómo tramito un documento?
+      - ¿Dónde tramito un documento?
+      - ¿Cómo obtengo un certificado?
+      - ¿Dónde puedo obtener un certificado?
+      - ¿Cómo solicito un certificado?
+      - ¿Dónde puedo solicitar un certificado?
+      - Necesito sacar un documento
+      - necesito tramitar un documento
+      - necesito obtener un documento
+      - necesito un documento
+      - necesito un papel
+      - nesesito sacar un papel
+      - como saco un papel
+      - como saco un papel?
+      - ¿Cómo saco un papel?
+      - ¿Cómo saco un documento?
+      - ¿Dónde puedo sacar un documento?
+      - Necesito sacar un papel
+      - donde puedo sacar un documento
+      - dónde puedo sacar un documento
+      - donde puedo tramitar un documento
+      - dónde puedo tramitar un documento
+      - quiero hacer preguntas sobre un documento
+      - quiero preguntar sobre un documento
+      - quiero hacer preguntas sobre un documento
+      - necesito información sobre un documento
+
+  ### AYUDA DOCUMENTOS NOMBRES
+  - intent: indica_documento_tramitar
+    examples: |
+      - Necesito un [certificado](tipo_documento)
+      - Quiero un [certificado](tipo_documento)
+      - Quiero sacar un [certificado](tipo_documento)
+      - un [Certificado](tipo_documento)
+      - [Certificado](tipo_documento)
+      - [certificado](tipo_documento)
+      - es un [certificado](tipo_documento)
+      - Me gustaría hacer una consulta sobre un [certificado](tipo_documento)
+      - Quiero hacer una consulta sobre un [certificado](tipo_documento)
+      - necesito ayuda con un [certificado](tipo_documento)
+      - quiero sacar un [certificado](tipo_documento)
+      - quiero sacar un [sertificado](tipo_documento)
+      - no se como sacar un [certificado](tipo_documento)
+      - que puedo hacer para sacar un [certificado](tipo_documento)
+      - necesito un [sertificado](tipo_documento)
+      - Necesito una [cédula](tipo_documento)
+      - Quiero una [cédula](tipo_documento)
+      - Quiero sacar una [cédula](tipo_documento)
+      - una [cédula](tipo_documento)
+      - [cédula](tipo_documento)
+      - [cédula](tipo_documento)
+      - es una [cédula](tipo_documento)
+      - Me gustaría hacer una consulta sobre una [cédula](tipo_documento)
+      - Quiero hacer una consulta sobre una [cédula](tipo_documento)
+      - necesito ayuda con una [cédula](tipo_documento)
+      - quiero sacar una [cédula](tipo_documento)
+      - quiero sacar una [cédula](tipo_documento)
+      - no se como sacar una [cédula](tipo_documento)
+      - que puedo hacer para sacar una [cédula](tipo_documento)
+      - necesito una [cédula](tipo_documento)
+      - Necesito una [cedula](tipo_documento)
+      - Quiero una [cedula](tipo_documento)
+      - Quiero sacar una [cedula](tipo_documento)
+      - una [cedula](tipo_documento)
+      - [cedula](tipo_documento)
+      - es una [cedula](tipo_documento)
+      - Me gustaría hacer una consulta sobre una [cedula](tipo_documento)
+      - Quiero hacer una consulta sobre una [cedula](tipo_documento)
+      - necesito ayuda con una [cedula](tipo_documento)
+      - quiero sacar una [cedula](tipo_documento)
+      - quiero sacar una [sedula](tipo_documento)
+      - no se como sacar una [cedula](tipo_documento)
+      - que puedo hacer para sacar una [cedula](tipo_documento)
+      - Necesito una [permiso](tipo_documento)
+      - Quiero una [permiso](tipo_documento)
+      - Quiero sacar una [permiso](tipo_documento)
+      - una [permiso](tipo_documento)
+      - [permiso](tipo_documento)
+      - es una [permiso](tipo_documento)
+      - Me gustaría hacer una consulta sobre una [permiso](tipo_documento)
+      - Quiero hacer una consulta sobre una [permiso](tipo_documento)
+      - necesito ayuda con una [permiso](tipo_documento)
+      - quiero sacar una [permiso](tipo_documento)
+      - no se como sacar una [permiso](tipo_documento)
+      - que puedo hacer para sacar una [permiso](tipo_documento)
+      - Necesito una [patente](tipo_documento)
+      - Quiero una [patente](tipo_documento)
+      - Quiero sacar una [patente](tipo_documento)
+      - una [patente](tipo_documento)
+      - [patente](tipo_documento)
+      - es una [patente](tipo_documento)
+      - Me gustaría hacer una consulta sobre una [patente](tipo_documento)
+      - Quiero hacer una consulta sobre una [patente](tipo_documento)
+      - necesito ayuda con una [patente](tipo_documento)
+      - quiero sacar una [patente](tipo_documento)
+      - no se como sacar una [patente](tipo_documento)
+      - que puedo hacer para sacar una [patente](tipo_documento)      
+      
+  - intent: elige_documento_especifico
+    examples: |
+      - la [opción uno](nombre_doc_especifico)
+      - la [opcion uno](nombre_doc_especifico)
+      - [opción uno](nombre_doc_especifico)
+      - [opcion uno](nombre_doc_especifico)
+      - [numero uno](nombre_doc_especifico)
+      - [número uno](nombre_doc_especifico)
+      - [opción 1](nombre_doc_especifico)
+      - [opcion 1](nombre_doc_especifico)
+      - [numero 1](nombre_doc_especifico)
+      - [número 1](nombre_doc_especifico)
+      - [1](nombre_doc_especifico)
+      - la cedula [1](nombre_doc_especifico)
+      - la cedula [numero uno](nombre_doc_especifico)
+      - la cedula [número uno](nombre_doc_especifico)
+      - la cedula [numero 1](nombre_doc_especifico)
+      - la cedula [número 1](nombre_doc_especifico)
+      - la [numero uno](nombre_doc_especifico)
+      - me interesa sacar un [Certificado de Residencia Definitiva](nombre_doc_especifico)
+      - necesito un [certificado de residencia definitiva](nombre_doc_especifico)
+      - un [Certificado de Residencia Definitiva](nombre_doc_especifico)
+      - de [residencia definitiva](nombre_doc_especifico)
+      - [residencia definitiva](nombre_doc_especifico)
+      - el [Certificado de Residencia Definitiva](nombre_doc_especifico)
+      - [Certificado de Residencia Definitiva](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Certificado de Residencia Definitiva](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Certificado de Residencia Definitiva](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Certificado de Residencia Definitiva](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Certificado de Residencia Definitiva](nombre_doc_especifico)
+      - la [opción dos](nombre_doc_especifico)
+      - la [opcion dos](nombre_doc_especifico)
+      - [opcion dos](nombre_doc_especifico)
+      - [opción dos](nombre_doc_especifico)
+      - [opcion 2](nombre_doc_especifico)
+      - [opción 2](nombre_doc_especifico)
+      - [número 2](nombre_doc_especifico)
+      - [numero 2](nombre_doc_especifico)
+      - [número dos](nombre_doc_especifico)
+      - [numero dos](nombre_doc_especifico)
+      - [2](nombre_doc_especifico)
+      - la cedula [2](nombre_doc_especifico)
+      - la cedula [numero dos](nombre_doc_especifico)
+      - la cedula [número dos](nombre_doc_especifico)
+      - la cedula [numero 2](nombre_doc_especifico)
+      - la cedula [número 2](nombre_doc_especifico)
+      - [número 2](nombre_doc_especifico)
+      - [numero 2](nombre_doc_especifico)
+      - [número dos](nombre_doc_especifico)
+      - [numero dos](nombre_doc_especifico)
+      - me interesa sacar un [Certificado de Estadía Temporal](nombre_doc_especifico)
+      - necesito un [Certificado de Estadía Temporal](nombre_doc_especifico)
+      - un [Certificado de Estadía Temporal](nombre_doc_especifico)
+      - de [Estadía Temporal](nombre_doc_especifico)
+      - [Estadía Temporal](nombre_doc_especifico)
+      - el [Certificado de Estadía Temporal](nombre_doc_especifico)
+      - [Certificado de Estadía Temporal](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Certificado de Estadía Temporal](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Certificado de Estadía Temporal](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Certificado de Estadía Temporal](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Certificado de Estadía Temporal](nombre_doc_especifico)
+      - la [opción tres](nombre_doc_especifico)
+      - la [opcion tres](nombre_doc_especifico)
+      - [opcion tres](nombre_doc_especifico)
+      - [opción tres](nombre_doc_especifico)
+      - [opcion 3](nombre_doc_especifico)
+      - [opción 3](nombre_doc_especifico)
+      - [número 3](nombre_doc_especifico)
+      - [numero 3](nombre_doc_especifico)
+      - [número tres](nombre_doc_especifico)
+      - [numero tres](nombre_doc_especifico)
+      - [3](nombre_doc_especifico)
+      - la cedula [3](nombre_doc_especifico)
+      - la cedula [numero tres](nombre_doc_especifico)
+      - la cedula [número tres](nombre_doc_especifico)
+      - la cedula [numero 3](nombre_doc_especifico)
+      - la cedula [número 3](nombre_doc_especifico)
+      - [número 3](nombre_doc_especifico)
+      - [numero 3](nombre_doc_especifico)
+      - [número tres](nombre_doc_especifico)
+      - [numero tres](nombre_doc_especifico)
+      - me interesa sacar un [Certificado de Extracción Productiva](nombre_doc_especifico)
+      - necesito un [Certificado de Extracción Productiva](nombre_doc_especifico)
+      - un [Certificado de Extracción Productiva](nombre_doc_especifico)
+      - de [Extracción Productiva](nombre_doc_especifico)
+      - [Extracción Productiva](nombre_doc_especifico)
+      - el [Certificado de Extracción Productiva](nombre_doc_especifico)
+      - [Certificado de Extracción Productiva](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Certificado de Extracción Productiva](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Certificado de Extracción Productiva](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Certificado de Extracción Productiva](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Certificado de Extracción Productiva](nombre_doc_especifico)
+      - [opcion cuatro](nombre_doc_especifico)
+      - [opción cuatro](nombre_doc_especifico)
+      - [opcion 4](nombre_doc_especifico)
+      - [opción 4](nombre_doc_especifico)
+      - [número 4](nombre_doc_especifico)
+      - [numero 4](nombre_doc_especifico)
+      - [número cuatro](nombre_doc_especifico)
+      - [numero cuatro](nombre_doc_especifico)
+      - [4](nombre_doc_especifico)
+      - la cedula [4](nombre_doc_especifico)
+      - la cedula [numero cuatro](nombre_doc_especifico)
+      - la cedula [número cuatro](nombre_doc_especifico)
+      - la cedula [numero 4](nombre_doc_especifico)
+      - la cedula [número 4](nombre_doc_especifico)
+      - me interesa sacar un [Certificado de Enrolamiento Militar de la República](nombre_doc_especifico)
+      - necesito un [Certificado de Enrolamiento Militar de la República](nombre_doc_especifico)
+      - un [Certificado de Enrolamiento Militar de la República](nombre_doc_especifico)
+      - de [Enrolamiento Militar](nombre_doc_especifico)
+      - [Enrolamiento Militar](nombre_doc_especifico)
+      - el [Certificado de Enrolamiento Militar de la República](nombre_doc_especifico)
+      - [Certificado de Enrolamiento Militar de la República](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Certificado de Enrolamiento Militar de la República](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Certificado de Enrolamiento Militar de la República](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Certificado de Enrolamiento Militar de la República](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Certificado de Enrolamiento Militar de la República](nombre_doc_especifico)
+      - [opcion cinco](nombre_doc_especifico)
+      - [opción cinco](nombre_doc_especifico)
+      - [opcion 5](nombre_doc_especifico)
+      - [opción 5](nombre_doc_especifico)
+      - [número 5](nombre_doc_especifico)
+      - [numero 5](nombre_doc_especifico)
+      - [número cinco](nombre_doc_especifico)
+      - [numero cinco](nombre_doc_especifico)
+      - la [opción cinco](nombre_doc_especifico)
+      - la [opcion cinco](nombre_doc_especifico)
+      - [5](nombre_doc_especifico)
+      - la cedula [5](nombre_doc_especifico)
+      - la cedula [numero cinco](nombre_doc_especifico)
+      - la cedula [número cinco](nombre_doc_especifico)
+      - la cedula [numero 5](nombre_doc_especifico)
+      - la cedula [número 5](nombre_doc_especifico)
+      - me interesa sacar un [Certificado Registro de Carga](nombre_doc_especifico)
+      - necesito un [Certificado Registro de Carga](nombre_doc_especifico)
+      - un [Certificado Registro de Carga](nombre_doc_especifico)
+      - de [Registro de Carga](nombre_doc_especifico)
+      - [Registro de Carga](nombre_doc_especifico)
+      - el [Certificado Registro de Carga](nombre_doc_especifico)
+      - [Certificado Registro de Carga](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Certificado Registro de Carga](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Certificado Registro de Carga](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Certificado Registro de Carga](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Certificado Registro de Carga](nombre_doc_especifico)
+      - [opcion seis](nombre_doc_especifico)
+      - [opción seis](nombre_doc_especifico)
+      - [opcion 6](nombre_doc_especifico)
+      - [opción 6](nombre_doc_especifico)
+      - [número 6](nombre_doc_especifico)
+      - [numero 6](nombre_doc_especifico)
+      - [número seis](nombre_doc_especifico)
+      - [numero seis](nombre_doc_especifico)
+      - la [opción seis](nombre_doc_especifico)
+      - la [opcion seis](nombre_doc_especifico)
+      - [6](nombre_doc_especifico)
+      - la cedula [6](nombre_doc_especifico)
+      - la cedula [numero seis](nombre_doc_especifico)
+      - la cedula [número seis](nombre_doc_especifico)
+      - la cedula [numero 6](nombre_doc_especifico)
+      - la cedula [número 6](nombre_doc_especifico)
+      - me interesa sacar un [Certificado de Antecedentes](nombre_doc_especifico)
+      - necesito un [Certificado de Antecedentes](nombre_doc_especifico)
+      - un [Certificado de Antecedentes](nombre_doc_especifico)
+      - de [Antecedentes](nombre_doc_especifico)
+      - [Antecedentes](nombre_doc_especifico)
+      - el [Certificado de Antecedentes](nombre_doc_especifico)
+      - [Certificado de Antecedentes](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Certificado de Antecedentes](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Certificado de Antecedentes](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Certificado de Antecedentes](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Certificado de Antecedentes](nombre_doc_especifico)
+      - [opcion siete](nombre_doc_especifico)
+      - [opción siete](nombre_doc_especifico)
+      - [opcion 7](nombre_doc_especifico)
+      - [opción 7](nombre_doc_especifico)
+      - [número 7](nombre_doc_especifico)
+      - [numero 7](nombre_doc_especifico)
+      - [número siete](nombre_doc_especifico)
+      - [numero siete](nombre_doc_especifico)
+      - la [opción siete](nombre_doc_especifico)
+      - la [opcion siete](nombre_doc_especifico)
+      - [7](nombre_doc_especifico)
+      - la cedula [7](nombre_doc_especifico)
+      - la cedula [numero siete](nombre_doc_especifico)
+      - la cedula [número siete](nombre_doc_especifico)
+      - la cedula [numero 7](nombre_doc_especifico)
+      - la cedula [número 7](nombre_doc_especifico)
+      - me interesa sacar un [Certificado Registro de Droides](nombre_doc_especifico)
+      - necesito un [Certificado Registro de Droides](nombre_doc_especifico)
+      - un [Certificado Registro de Droides](nombre_doc_especifico)
+      - de [Registro de Droides](nombre_doc_especifico)
+      - [Registro de Droides](nombre_doc_especifico)
+      - el [Certificado Registro de Droides](nombre_doc_especifico)
+      - [Certificado Registro de Droides](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Certificado Registro de Droides](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Certificado Registro de Droides](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Certificado Registro de Droides](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Certificado Registro de Droides](nombre_doc_especifico)
+      - la [opción ocho](nombre_doc_especifico)
+      - la [opcion ocho](nombre_doc_especifico)
+      - [8](nombre_doc_especifico)
+      - la licencia [8](nombre_doc_especifico)
+      - la licencia [numero ocho](nombre_doc_especifico)
+      - la licencia [número ocho](nombre_doc_especifico)
+      - la licencia [numero 8](nombre_doc_especifico)
+      - la licencia [número 8](nombre_doc_especifico)
+      - me interesa sacar un [Licencia Oficial Piloto Federado](nombre_doc_especifico)
+      - necesito un [Licencia Oficial Piloto Federado](nombre_doc_especifico)
+      - un [Licencia Oficial Piloto Federado](nombre_doc_especifico)
+      - de [Licencia de Piloto Federado](nombre_doc_especifico)
+      - de [Piloto Federado](nombre_doc_especifico)
+      - [Piloto Federado](nombre_doc_especifico)
+      - [Licencia de Piloto Federado](nombre_doc_especifico)
+      - la [Licencia Oficial Piloto Federado](nombre_doc_especifico)
+      - [Licencia Oficial Piloto Federado](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Licencia Oficial Piloto Federado](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Licencia Oficial Piloto Federado](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Licencia Oficial Piloto Federado](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Licencia Oficial Piloto Federado](nombre_doc_especifico)
+      - la [opción nueve](nombre_doc_especifico)
+      - la [opcion nueve](nombre_doc_especifico)
+      - [9](nombre_doc_especifico)
+      - la licencia [9](nombre_doc_especifico)
+      - la licencia [numero nueve](nombre_doc_especifico)
+      - la licencia [número nueve](nombre_doc_especifico)
+      - la licencia [numero 9](nombre_doc_especifico)
+      - la licencia [número 9](nombre_doc_especifico)
+      - me interesa sacar un [Licencia de Transporte Espacial](nombre_doc_especifico)
+      - necesito un [Licencia de Transporte Espacial](nombre_doc_especifico)
+      - un [Licencia de Transporte Espacial](nombre_doc_especifico)
+      - de [Licencia Transporte Espacial](nombre_doc_especifico)
+      - de [Transporte Espacial](nombre_doc_especifico)
+      - [Transporte Espacial](nombre_doc_especifico)
+      - [Licencia Transporte Espacial](nombre_doc_especifico)
+      - la [Licencia de Transporte Espacial](nombre_doc_especifico)
+      - [Licencia de Transporte Espacial](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Licencia de Transporte Espacial](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Licencia de Transporte Espacial](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Licencia de Transporte Espacial](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Licencia de Transporte Espacial](nombre_doc_especifico)
+      - la [opción diez](nombre_doc_especifico)
+      - la [opcion diez](nombre_doc_especifico)
+      - [10](nombre_doc_especifico)
+      - la cedula [10](nombre_doc_especifico)
+      - la cedula [numero diez](nombre_doc_especifico)
+      - la cedula [número diez](nombre_doc_especifico)
+      - la cedula [numero 10](nombre_doc_especifico)
+      - la cedula [número 10](nombre_doc_especifico)
+      - me interesa sacar un [Cédula Única Sistema Planetario](nombre_doc_especifico)
+      - me interesa sacar un [cedula unica Sistema Planetario](nombre_doc_especifico)      
+      - necesito un [Cédula Única Sistema Planetario](nombre_doc_especifico)
+      - un [Cédula Única Sistema Planetario](nombre_doc_especifico)
+      - de [cedula unica](nombre_doc_especifico)
+      - [Cédula Única](nombre_doc_especifico)
+      - la [Cédula Única Sistema Planetario](nombre_doc_especifico)
+      - [Cédula Única Sistema Planetario](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Cédula Única Sistema Planetario](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Cédula Única Sistema Planetario](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Cédula Única Sistema Planetario](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Cédula Única Sistema Planetario](nombre_doc_especifico)
+      - la [opción once](nombre_doc_especifico)
+      - la [opcion once](nombre_doc_especifico)
+      - [11](nombre_doc_especifico)
+      - la cedula [11](nombre_doc_especifico)
+      - la cedula [numero once](nombre_doc_especifico)
+      - la cedula [número once](nombre_doc_especifico)
+      - la cedula [numero 11](nombre_doc_especifico)
+      - la cedula [número 11](nombre_doc_especifico)
+      - me interesa sacar un [Cédula de Bienestar Social](nombre_doc_especifico)
+      - me interesa sacar un [cedula de Bienestar](nombre_doc_especifico)      
+      - necesito un [Cédula de Bienestar Social](nombre_doc_especifico)
+      - un [Cédula de Bienestar Social](nombre_doc_especifico)
+      - de [Bienestar](nombre_doc_especifico)
+      - [Bienestar](nombre_doc_especifico)
+      - [Cédula Única](nombre_doc_especifico)
+      - la [Cédula de Bienestar Social](nombre_doc_especifico)
+      - [Cédula de Bienestar Social](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Cédula de Bienestar Social](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Cédula de Bienestar Social](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Cédula de Bienestar Social](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Cédula de Bienestar Social](nombre_doc_especifico)
+      - la [opción doce](nombre_doc_especifico)
+      - la [opcion doce](nombre_doc_especifico)
+      - [12](nombre_doc_especifico)
+      - el permiso [12](nombre_doc_especifico)
+      - el permiso [numero doce](nombre_doc_especifico)
+      - el permiso [número doce](nombre_doc_especifico)
+      - el permiso [numero 12](nombre_doc_especifico)
+      - el permiso [número 12](nombre_doc_especifico)
+      - me interesa sacar un [Permiso de Exploración Planetaria](nombre_doc_especifico)
+      - me interesa sacar un [cedula de Bienestar](nombre_doc_especifico)      
+      - necesito un [Permiso de Exploración Planetaria](nombre_doc_especifico)
+      - un [Permiso de Exploración Planetaria](nombre_doc_especifico)
+      - de [Bienestar](nombre_doc_especifico)
+      - [Bienestar](nombre_doc_especifico)
+      - [Cédula Única](nombre_doc_especifico)
+      - el [Permiso de Exploración Planetaria](nombre_doc_especifico)
+      - [Permiso de Exploración Planetaria](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Permiso de Exploración Planetaria](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Permiso de Exploración Planetaria](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Permiso de Exploración Planetaria](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Permiso de Exploración Planetaria](nombre_doc_especifico)
+      - la [opción trece](nombre_doc_especifico)
+      - la [opcion trece](nombre_doc_especifico)
+      - [13](nombre_doc_especifico)
+      - el permiso [13](nombre_doc_especifico)
+      - el permiso [numero trece](nombre_doc_especifico)
+      - el permiso [número trece](nombre_doc_especifico)
+      - el permiso [numero 13](nombre_doc_especifico)
+      - el permiso [número 13](nombre_doc_especifico)
+      - me interesa sacar un [Permiso de Asentamientos Coloniales](nombre_doc_especifico)
+      - me interesa sacar un [cedula de Bienestar](nombre_doc_especifico)      
+      - necesito un [Permiso de Asentamientos Coloniales](nombre_doc_especifico)
+      - un [Permiso de Asentamientos Coloniales](nombre_doc_especifico)
+      - de [Asentamientos Coloniales](nombre_doc_especifico)
+      - [Asentamientos Coloniales](nombre_doc_especifico)
+      - [asentamientos](nombre_doc_especifico)
+      - el [Permiso de Asentamientos Coloniales](nombre_doc_especifico)
+      - [Permiso de Asentamientos Coloniales](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Permiso de Asentamientos Coloniales](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Permiso de Asentamientos Coloniales](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Permiso de Asentamientos Coloniales](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Permiso de Asentamientos Coloniales](nombre_doc_especifico)
+      - la [opción catorce](nombre_doc_especifico)
+      - la [opcion catorce](nombre_doc_especifico)
+      - [14](nombre_doc_especifico)
+      - el permiso [14](nombre_doc_especifico)
+      - el permiso [numero catorce](nombre_doc_especifico)
+      - el permiso [número catorce](nombre_doc_especifico)
+      - el permiso [numero 14](nombre_doc_especifico)
+      - el permiso [número 14](nombre_doc_especifico)
+      - me interesa sacar un [Permiso de Aterrizaje](nombre_doc_especifico)
+      - me interesa sacar un [cedula de Bienestar](nombre_doc_especifico)      
+      - necesito un [Permiso de Aterrizaje](nombre_doc_especifico)
+      - un [Permiso de Aterrizaje](nombre_doc_especifico)
+      - de [Aterrizaje](nombre_doc_especifico)
+      - [Aterrizaje](nombre_doc_especifico)
+      - [Aterrisaje](nombre_doc_especifico)
+      - el [Permiso de Aterrizaje](nombre_doc_especifico)
+      - [Permiso de Aterrizaje](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Permiso de Aterrizaje](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Permiso de Aterrizaje](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Permiso de Aterrizaje](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Permiso de Aterrizaje](nombre_doc_especifico)
+      - la [opción quince](nombre_doc_especifico)
+      - la [opcion quince](nombre_doc_especifico)
+      - [15](nombre_doc_especifico)
+      - la patente [15](nombre_doc_especifico)
+      - la patente [numero quince](nombre_doc_especifico)
+      - la patente [número quince](nombre_doc_especifico)
+      - la patente [numero 15](nombre_doc_especifico)
+      - la patente [número 15](nombre_doc_especifico)
+      - me interesa sacar un [Patente Comercial Intergálactica](nombre_doc_especifico)
+      - me interesa sacar un [cedula de Bienestar](nombre_doc_especifico)      
+      - necesito un [Patente Comercial Intergalactica](nombre_doc_especifico)
+      - un [Patente Comercial Intergalactica](nombre_doc_especifico)
+      - [Patente Comercial](nombre_doc_especifico)
+      - [Comercial](nombre_doc_especifico)
+      - la [Patente Comercial Intergálactica](nombre_doc_especifico)
+      - [Patente Comercial Intergalactica](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Patente Comercial Intergálactica](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Patente Comercial Intergalactica](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Patente Comercial Intergálactica](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Patente Comercial Intergalactica](nombre_doc_especifico)
+      - la [opción dieciseis](nombre_doc_especifico)
+      - la [opcion dieciseis](nombre_doc_especifico)
+      - [16](nombre_doc_especifico)
+      - la patente [16](nombre_doc_especifico)
+      - la patente [numero dieciseis](nombre_doc_especifico)
+      - la patente [número dieciseis](nombre_doc_especifico)
+      - la patente [numero 16](nombre_doc_especifico)
+      - la patente [número 16](nombre_doc_especifico)
+      - me interesa sacar un [Patente de Inventos](nombre_doc_especifico)
+      - me interesa sacar un [cedula de Bienestar](nombre_doc_especifico)      
+      - necesito un [Patente de Inventos](nombre_doc_especifico)
+      - un [Patente de Inventos](nombre_doc_especifico)
+      - [Patente Comercial](nombre_doc_especifico)
+      - [Patente de Inventos](nombre_doc_especifico)
+      - la [Patente de Inventos](nombre_doc_especifico)
+      - [Patente de Inventos](nombre_doc_especifico)
+      - Me gustaría hacer una consulta sobre el [Patente de Inventos](nombre_doc_especifico)
+      - Quiero hacer una consulta sobre el [Patente de Inventos](nombre_doc_especifico)
+      - Quiero hacer una pregunta sobre el [Patente de Inventos](nombre_doc_especifico)
+      - Quiero preguntar sobre el [Patente de Inventos](nombre_doc_especifico)
+
+  - intent: proporcionar_campo_requisito
+    examples: |
+      - ¿Cuáles son los [requisitos](campo_requisito) para sacar
+      - cuales son los [requisitos](campo_requisito) para obtener
+      - cuales son los [requisitos](campo_requisito) para obtener
+      - cuales son los [requisitos](campo_requisito) para obtener
+      - cuales son los [requisitos](campo_requisito) para sacarlo?
+      - cuales son los [requisitos](campo_requisito) para obtenerlo?
+      - cuales son los [requisitos](campo_requisito) para tramitarlo?
+      - cuales son los [requisitos](campo_requisito)?
+      - que [necesito](campo_requisito) para sacar
+      - que [papeles](campo_requisito) necesito?
+      - que [documentos](campo_requisito) necesito?
+      - qué [papeles](campo_requisito) necesito para obtener la cedula?
+      - Cual es la [documentación](campo_requisito) necesaria para obtener el permiso?
+      - cuales son los [documentos](campo_requisito) que necesito presentar?
+      - que [documentación](campo_requisito) se necesita para tramitarlo?
+      - que [documentación](campo_requisito) se necesita
+      - que [papeles](campo_requisito) son necesarios para su tramitación?
+      - necesito saber cuales son los requisitos
+      - necesito saber cuales son los requisitos para obtenerlo
+      - necesito saber cuales son los requisitos para sacarlo
+      - necesito saber cuales son los requisitos para tramitarlo
+      - necesito saber los requisitos
+      - necesito saber los requisitos para obtenerlo
+      - necesito saber los requisitos para sacarlo
+      - necesito saber los requisitos para tramitarlo
+
+  - intent: proporcionar_campo_ubicacion
+    examples: |
+      - [donde](campo_ubicacion) tengo que ir?
+      - [donde](campo_ubicacion) hay que ir?
+      - [a dónde](campo_ubicacion) tengo que ir
+      - [a dónde](campo_ubicacion) hay que ir
+      - [a dónde](campo_ubicacion) tengo que ir para sacarlo
+      - [a dónde](campo_ubicacion) tengo que ir para obtenerlo
+      - [a dónde](campo_ubicacion) tengo que ir para tramitarlo 
+      - [dónde](campo_ubicacion) están las oficinas
+      - [donde](campo_ubicacion) estan las oficinas
+      - [dónde](campo_ubicacion) están localizadas las oficinas
+      - [dónde](campo_ubicacion) están ubicadas las oficinas
+      - [dónde](campo_ubicacion) quedan ubicadas las oficinas
+      - [dónde](campo_ubicacion) quedan las oficinas
+      - [en donde](campo_ubicacion) se tramita
+      - [en dónde](campo_ubicacion) queda el departamento 
+      - cual es la [dirección](campo_ubicacion)
+      - cual es la [dirección](campo_ubicacion) de las oficinas?
+      - cual es la [dirección](campo_ubicacion) de la oficina?
+      - [dónde](campo_ubicacion) sacar la cedula
+      - [dónde](campo_ubicacion) puedo obtener el permiso
+      - [dónde](campo_ubicacion) puedo tramitar la patente
+      - [dónde](campo_ubicacion) puedo sacarlo
+      - [dónde](campo_ubicacion) puedo obtenerlo
+      - [dónde](campo_ubicacion) puedo tramitarlo
+      - quiero saber donde puedo sacar
+      - quiero saber donde puedo obtener
+      - quiero saber donde puedo tramitar
+      - quiero saber donde puedo sacarlo
+      - quiero saber donde puedo obtenerlo
+      - quiero saber donde puedo tramitarlo
+
+  - intent: proporcionar_campo_horario
+    examples: |
+      - a que [hora](campo_horario) atienden
+      - a qué [hora](campo_horario) atienden
+      - a que [hora](campo_horario) atienden las oficinas
+      - a que [hora](campo_horario) abren
+      - a qué [hora](campo_horario) abren
+      - a que [hora](campo_horario) cierran
+      - a que [hora](campo_horario) abren las oficinas
+      - a que [hora](campo_horario) cierran las oficinas
+      - cual es el [horario](campo_horario) de atención
+      - a qué [hora](campo_horario) comienza la atención
+      - a que [hora](campo_horario) comienza la atención
+      - a qué [hora](campo_horario) termina la atención
+      - a que [hora](campo_horario) termina la atención
+      - a qué [hora](campo_horario) comienzan a atender
+      - a que [hora](campo_horario) comienzan a atender
+      - hasta qué [hora](campo_horario) puedo ir
+      - hasta que [hora](campo_horario) puedo ir
+      - hasta qué [hora](campo_horario) se puede ir
+      - hasta que [hora](campo_horario) se puede ir
+      - ¿me puedes indicar a qué [hora](campo_horario) atienden?
+      - ¿me puedes indicar a qué [hora](campo_horario) abren?
+      - ¿me puedes indicar a qué [hora](campo_horario) cierran?
+      - ¿me puedes indicar a qué [hora](campo_horario) comienza la atención?
+      - ¿podrías decirme cuál es el [horario](campo_horario) de atención?
+      - ¿podrías decirme a qué [hora](campo_horario) comienza la atención?
+
+
+  - intent: proporcionar_campo_contacto
+    examples: |
+      - cual es el [correo electrónico](campo_contacto)
+      - cuál es el [correo](campo_contacto)
+      - cual es el [correo electrónico](campo_contacto) de contacto
+      - cual es el [correo electrónico](campo_contacto) de contacto de las oficinas
+      - a que [correo](campo_contacto) puedo escribir
+      - a que [correo](campo_contacto) puedo escribir para obtener información
+      - a que [correo](campo_contacto) hay que escribir
+      - a que [correo electronico](campo_contacto) hay que escribir
+      - a que [mail](campo_contacto) hay que escribir para obtener información
+      - a que [mail](campo_contacto) hay que escribir
+      - a que [mail](campo_contacto) tengo que escribir para hacer un reclamo
+      - cual es el [e-mail](campo_contacto) del departamento
+      - cual es el [e-mail](campo_contacto) de contacto
+      - cual es el [e-mail](campo_contacto)?
+
+  - intent: proporcionar_campo_telefono
+    examples: |
+      - a que [holocom number](campo_telefono) puedo llamar
+      - a que [holocom](campo_telefono) puedo llamar
+      - a que [numero](campo_telefono) tengo que llamar
+      - a que [numero](campo_telefono) hay que llamar
+      - a que [telefono](campo_telefono) tengo que llamar
+      - a que [teléfono](campo_telefono) tengo que llamar
+      - a que [telefono](campo_telefono) hay que llamar
+      - cual es el [holocom](campo_telefono) al que hay que llamar
+      - cual es el [holocom number](campo_telefono) al que hay que llamar
+      - cual es el [holocom number](campo_telefono) de contacto
+      - cuanto [dura](campo_telefono) el documento
+      - me da el [número](campo_telefono) para pedir información
+      - dame el [numero](campo_telefono) para comunicarme
+      - me das el [número de telefono](campo_telefono) 
+      - me das el [numero de telefono](campo_telefono)
+      - me podrías compartir el [contacto telefonico](campo_telefono) del departamento
+      - me podrías compartir el [contacto telefonico](campo_telefono) de las oficinas
+      - me podrías compartir el [contacto telefonico](campo_telefono) de la oficina
+      - tienen un [teléfono](campo_telefono) con el que pueda comunicarme
+      - tienen un [teléfono](campo_telefono) con al que pueda llamar
+      - tienen un [telefono](campo_telefono) con al que pueda llamar
+      - tienen un [telefono](campo_telefono) con el que pueda contactarme
+      - tienen un [numero de telefono](campo_telefono) con el que pueda comunicarme 
+      - tienen un [numero de telefono](campo_telefono) al que pueda llamar
+      - tienen un [numero de telefono](campo_telefono) con el que pueda contactarme
+      - me podrias compartir el [holocom number](campo_telefono)
+      - me podrias compartir el [holocom](campo_telefono)
+      - me podrias compartir el [número](campo_telefono) de telefono
+      - me podrias compartir el [telefono](campo_telefono)
+
+  - intent: proporcionar_campo_duracion
+    examples: |  
+      - cuanto [tiempo](campo_duracion) dura la cedula
+      - por cuanto [tiempo](campo_duracion) es valido
+      - por cuánto [tiempo](campo_duracion) es válido
+      - cuanto es el [tiempo](campo_duracion) de [validez](campo_duracion)
+      - cuanto es el [tiempo](campo_duracion) de [validez](campo_duracion)
+      - por cuanto [tiempo](campo_duracion) tiene [vigencia](campo_duracion)
+      - tiene un [tiempo](campo_duracion) de [vigencia](campo_duracion)
+      - cuanto [dura](campo_duracion)
+      - cuánto [dura](campo_duracion) la cedula
+      - cuanto [tiempo de validez](campo_duracion) tiene
+      - cuanto [tiempo](campo_duracion) de [valides](campo_duracion) tiene
+
+  - intent: proporcionar_campo_sanciones
+    examples: |
+      - hay una [multa](campo_sanciones) asociada
+      - hay una [multa](campo_sanciones) asociada al documento
+      - hay una [sancion](campo_sanciones) asociada si no lo tengo
+      - hay una [penalidad](campo_sanciones) si no porto
+      - me arriesgo a alguna [sanción](campo_sanciones) si no lo tengo
+      - me arriesgo a alguna [penalidad](campo_sanciones)
+      - a que [penalidades](campo_sanciones) me expongo si no lo tengo
+      - a que [sanciones](campo_sanciones) me expongo si no tengo
+      - a que [sanción](campo_sanciones) me expongo si no lo tengo
+      - hay alguna [sanción](campo_sanciones) si no lo tengo
+      - hay alguna [penalidad](campo_sanciones) si no lo tengo
+      - hay alguna [multa](campo_sanciones)
+      - cual es la [multa](campo_sanciones) si no saco
+      - cual es la [sancion](campo_sanciones) si no tengo
+      - cual es la [penalidad](campo_sanciones) si no tengo
+      - cual es la [sanción](campo_sanciones) si no tengo
+      - cuales son las [sanciones](campo_sanciones) si no tengo
+      - cuales son las [penalidades](campo_sanciones) si no tengo
+      - que me [puede pasar](campo_sanciones) si no tengo
+      - que me [puede pasar](campo_sanciones) si no saco
+      - que me [puede pasar](campo_sanciones) si no lo tengo
+      - que me [puede pasar](campo_sanciones) si no porto
+      - que me [puede pasar](campo_sanciones) si no lo saco
+
+  ### ACCIONES
+  - intent: pregunta_accion_cdr
+    examples: |
+      - como puedo [demostrar](accion_cert) que [vivo](accion_cert) en Curoscant
+      - como [demuestro](accion_cert) que [vivo](accion_cert) en Curoscant
+      - que puedo hacer para [acreditar](accion_cert) que [vivo](accion_cert) en Curoscant
+      - como [acredito](accion_cert) que soy de Curoscant
+      - Necesito un papel para [comprobar](accion_cert) mi [residencia](accion_cert) Curoscant
+      - Que papel necesito para [comprobar](accion_cert) mi [cuidadania](accion_cert)
+      - Como puedo [certificar](accion_cert) mi [residencia](accion_cert) en el planeta
+      - Como [certifico](accion_cert) que [vivo](accion_cert) en Curoscant
+      - como puedo [demostrar](accion_cert) mi [domicilio](accion_cert) en Curoscant
+      - Necesito [certificar](accion_cert) mi [nacionalidad](accion_cert) en Curoscant. Que papel necesito
+      - Que papel necesito para [certificar](accion_cert) mi [nacionalidad](accion_cert) en Curoscant
+      - Necesito [certificar](accion_cert) mi [ciudadania](accion_cert)
+      - ¿Qué pasos debo seguir para [demostrar](accion_cert) mi [residencia](accion_cert) en Curoscant?
+      - ¿Cómo [acredito](accion_cert) que mi [domicilio](accion_cert) es en Curoscant?
+      - Dime cómo puedo [comprobar](accion_cert) mi [residencia](accion_cert) en Curoscant.
+      - ¿Podrías indicarme cómo [certificar](accion_cert) mi [nacionalidad](accion_cert) en Curoscant?
+      - Necesito [acreditar](accion_cert) mi [ciudadanía](accion_cert) en Curoscant, ¿qué hago?
+      - ¿Cómo se [demuestra](accion_cert) que [vivo](accion_cert) en Curoscant?
+      - Quiero [comprobar](accion_cert) que mi [domicilio](accion_cert) es correcto en Curoscant.
+      - ¿Qué debo hacer para [acreditar](accion_cert) mi [residencia](accion_cert) en este planeta?
+      - Indícame cómo [certifico](accion_cert) que [soy](accion_cert) residente en Curoscant.
+      - Requiero [demostrar](accion_cert) mi [domicilio](accion_cert) en Curoscant para mi trámite.
+
+  - intent: pregunta_accion_cpf
+    examples: |
+      - que papel debo tener si quiero [manejar](accion_cert) una [nave](accion_cert) en Curoscant
+      - que papel debo tener si quiero [pilotar](accion_cert) una [nave](accion_cert) en Curoscant 
+      - que papel debo tener si quiero [volar](accion_cert) una [nave](accion_cert) en Curoscant
+      - que papel debo tener si quiero [conducir](accion_cert) una [nave](accion_cert) en Curoscant
+      - que autorización debo obtener si quiero [manejar](accion_cert) una [nave](accion_cert)
+      - que autorización debo obtener si quiero [pilotar](accion_cert) una [nave](accion_cert)
+      - que autorización debo obtener si quiero [volar](accion_cert) una [nave](accion_cert)
+      - que autorización debo obtener si quiero [conducir](accion_cert) una [nave](accion_cert)
+      - quiero [manejar](accion_cert) un [caza](accion_cert). qué papel debo tener?
+      - quiero [pilotar](accion_cert) un [caza estelar](accion_cert). qué papel debo tener?
+      - quiero [volar](accion_cert) un [nave particular](accion_cert). qué papel debo tener?
+      - quiero [conducir](accion_cert) una [nave espacial](accion_cert). qué papel debo tener?
+      - que documento debo sacar para [manejar](accion_cert) un [bombardero](accion_cert)
+      - que documento debo sacar para [pilotar](accion_cert) un [X-wing](accion_cert)
+      - que documento debo sacar para [volar](accion_cert) un [Millennium Falcon](accion_cert)
+      - que documento debo sacar para [conducir](accion_cert) un [N-1 Starfighter](accion_cert)
+      - que papel debo tramitar para [manejar](accion_cert) una [nave](accion_cert)
+      - que papel debo tramitar para [pilotar](accion_cert) un [X-wing](accion_cert)
+      - que papel debo tramitar para [volar](accion_cert) un [Millennium Falcon](accion_cert)
+      - que papel debo tramitar para [conducir](accion_cert) un [N-1 Starfighter](accion_cert)
+      - que debo tener si quiero [manejar](accion_cert) un [bombardero](accion_cert)
+      - que debo tener si quiero [pilotar](accion_cert) un [nave de asalto](accion_cert)
+      - que debo tener si quiero [volar](accion_cert) un [U-wing](accion_cert)
+      - que debo tener si quiero [conducir](accion_cert) un [Patrol transport](accion_cert)
+
+  - intent: pregunta_accion_lte     
+    examples: |
+      - que papel debo tener si quiero [manejar](accion_cert) una [nave de construcción](accion_cert)
+      - que papel debo tener si quiero [pilotar](accion_cert) una [nave de minería](accion_cert) 
+      - que papel debo tener si quiero [volar](accion_cert) una [nave de transporte](accion_cert)
+      - que papel debo tener si quiero [conducir](accion_cert) una [nave de comando](accion_cert)
+      - que autorización debo obtener si quiero [operar](accion_cert) una [nave de pasajeros](accion_cert)
+      - que autorización debo obtener si quiero [pilotar](accion_cert) una [nave de rescate](accion_cert)
+      - que autorización debo obtener si quiero [volar](accion_cert) un [destructor](accion_cert)
+      - que autorización debo obtener si quiero [conducir](accion_cert) un [carguero](accion_cert)
+      - quiero [manejar](accion_cert) un [transporte](accion_cert). qué papel debo tener?
+      - quiero [operar](accion_cert) un [transporte de carga](accion_cert). qué papel debo tener?
+      - quiero [volar](accion_cert) un [transporte de pasajeros](accion_cert). qué papel debo tener?
+      - quiero [conducir](accion_cert) una [nave de carga](accion_cert). qué papel debo tener?
+      - que documento debo sacar para [manejar](accion_cert) un [vehículo de carga](accion_cert)
+      - que documento debo sacar para [pilotar](accion_cert) una [nave de construcción](accion_cert)
+      - que documento debo sacar para [volar](accion_cert) una [nave de minería](accion_cert)
+      - que documento debo sacar para [conducir](accion_cert) un [destructor](accion_cert)
+      - que papel debo tramitar para [manejar](accion_cert) un [carguero](accion_cert)
+      - que papel debo tramitar para [pilotar](accion_cert) un [transporte de carga](accion_cert)
+      - que papel debo tramitar para [volar](accion_cert) una [nave de comando](accion_cert)
+      - que papel debo tramitar para [conducir](accion_cert) un [destructor](accion_cert)
+      - que debo tener si quiero [manejar](accion_cert) un [vehículo de carga](accion_cert)
+      - que debo tener si quiero [pilotar](accion_cert) un [transporte de pasajeros](accion_cert)
+      - que debo tener si quiero [volar](accion_cert) un [nave de carga](accion_cert)
+      - que debo tener si quiero [conducir](accion_cert) un [transporte de carga](accion_cert)
+      - que necesito tramitar para [transportar](accion_cert) [mercancias](accion_cert)
+      - que necesito para [transportar](accion_cert) [mercaderias](accion_cert)
+      - que documento es necesario para [transportar](accion_cert) [bienes](accion_cert)
+      - que necesito si quiero [conducir](accion_cert) una [nave de carga](accion_cert)
+
+  - intent: pregunta_accion_isp
+    examples: |
+      - Que tengo que hacer para [renovar](accion_cert) mi [carné](accion_cert)
+      - Que tengo que hacer para [sacar](accion_cert) un [carné de identidad](accion_cert)
+      - Que tengo que hacer para [obtener](accion_cert) un [documento de identidad](accion_cert)
+      - Que tengo que hacer para [actualizar](accion_cert) un [documento de identificación](accion_cert)
+      - Que tengo que hacer para [obtener](accion_cert) una [cédula de identidad](accion_cert)
+      - Que tengo que hacer para [sacar](accion_cert) mi [tarjeta de identificación](accion_cert)
+      - Que hay que hacer para [solicitar](accion_cert) la [renovación](accion_cert)
+      - Que necesito hacer para [sacar](accion_cert) mi [carné de identidad](accion_cert)
+      - Que necesito hacer para [obtener](accion_cert) mi [documento de identidad](accion_cert)
+      - Que necesito hacer para [solictar](accion_cert) mi [cédula de identidad](accion_cert)
+      - Quiero sacar mi [carné de identidad](accion_cert)
+      - Quiero sacar mi [carne de identidad](accion_cert)
+      - Quiero sacar mi [cedula de identidad](accion_cert)
+      - Quiero sacar mi [cédula de identidad](accion_cert)
+      - Quiero sacar mi [karne de identidad](accion_cert)
+      - Quiero sacar mi [carnet de identidad](accion_cert)
+      - Quiero sacar mi [sedula de identidad](accion_cert)
+
+  - intent: pregunta_accion_cet
+    examples: |
+      - Que papel debo tener para [visitar](accion_cert) [Curoscant](accion_cert)
+      - Que papel debo tener para [entrar](accion_cert) a [Curoscant](accion_cert)
+      - Que papel debo tener para [ingresar](accion_cert) a [Curoscant](accion_cert)
+      - Que papel debo tener para [turistear](accion_cert) en [Curoscant](accion_cert)
+      - Que papel debo tener para [alojarme](accion_cert) en el [planeta](accion_cert)
+      - Que papel debo tener para [hospedarme](accion_cert) en [Curoscant](accion_cert)
+      - Que papel debo tener para [turistear](accion_cert) [Curoscant](accion_cert)
+      - Que papel debo tener para [turistear](accion_cert) [Curoscant](accion_cert)
+      - Que necesito para [conocer](accion_cert) [Curoscant](accion_cert)
+      - Que necesito para [recorrer](accion_cert) [Curoscant](accion_cert)
+      - Que necesito para [turistear](accion_cert) el [planeta](accion_cert)
+
+  - intent: pregunta_accion_pep
+    examples: |
+      - Que papel necesito para [explorar](accion_cert) [territorios inexplorados](accion_cert) en Curoscant
+      - Que debo hacer para [investigar](accion_cert) [territorios desconocidos](accion_cert) de Curoscant
+      - Que se requiere para [descubrir](accion_cert) [territorios](accion_cert) en Curoscant
+      - Que pasos debo seguir para [recorrer](accion_cert) [minas](accion_cert) en Curoscant
+      - Que se necesita para [colonizar](accion_cert) [Exploración científica](accion_cert) en Curoscant
+      - Que debo tener para [buscar](accion_cert) [Exploración minera](accion_cert) en Curoscant
+      - Que necesito para [hacer](accion_cert) [Exploración espacial](accion_cert) en Curoscant
+      - Que papel debo tener para [dedicarme](accion_cert) a [salir a explorar](accion_cert) [territorios inexplorados](accion_cert)
+      - Que requisitos necesito para [explorar](accion_cert) [minas](accion_cert) en [Curoscant](accion_cert)
+      - Que pasos debo seguir para [investigar](accion_cert) [territorios](accion_cert) en [Curoscant](accion_cert)
+
+  - intent: pregunta_accion_ras
+    examples: |
+      - Que papel necesito para [colonizar](accion_cert) un [territorio en otro planeta](accion_cert)?
+      - Que necesito para [asentar](accion_cert) una [colonia](accion_cert)?
+      - Como puedo [establecer](accion_cert) un [asentamiento](accion_cert)?
+      - Que pasos debo seguir para [crear](accion_cert) una [comunidad](accion_cert)?
+      - Que requisitos necesito para [fundar](accion_cert) una [colonia](accion_cert)?
+      - Como puedo [organizar](accion_cert) una [comunidad planetaria](accion_cert)?
+      - Que debo hacer para [colonizar](accion_cert) un [planeta](accion_cert)?
+      - Que pasos debo seguir para [asentar](accion_cert) un [comunidad planetaria](accion_cert)?
+      - Que requisitos necesito para [establecer](accion_cert) una [comunidad](accion_cert)?
+      - Como puedo [crear](accion_cert) un [territorio en otro planeta](accion_cert)?
+
+  - intent: pregunta_accion_cep
+    examples: |
+      - Que papel necesito para [dedicarme](accion_cert) a la [obtención](accion_cert) de [recursos naturales](accion_cert)?
+      - Que papel necesito para [extraer](accion_cert) [recursos](accion_cert)?
+      - Que papel necesito para [minar](accion_cert) [reservas](accion_cert)?
+      - Que papel necesito para [explotar](accion_cert) [materias primas](accion_cert)?
+      - Que papel necesito para [producir](accion_cert) [materias primas](accion_cert)?
+      - Que papel necesito para [obtener](accion_cert) [reservas](accion_cert)?
+      - Que papel necesito para [desarrollar](accion_cert) la [explotación](accion_cert) de [recursos](accion_cert)?
+      - Que papel necesito para [recolectar](accion_cert) el [acopio](accion_cert) de [recursos](accion_cert)?
+      - Que papel necesito para [dedicarme](accion_cert) a la [perforación](accion_cert) de [reservas](accion_cert)?
+      - Que papel necesito para [extraer](accion_cert) [recursos naturales](accion_cert)?
+      - Que papel necesito para [minar](accion_cert) la [extracción](accion_cert) de [materias primas](accion_cert)?
+      - Que papel necesito para [explotar](accion_cert) la [producción](accion_cert) de [recursos](accion_cert)?
+      - Que papel necesito para [producir](accion_cert) la [producción](accion_cert) de [reservas](accion_cert)?
+      - Que papel necesito para [obtener](accion_cert) la [acopio](accion_cert) de [recursos naturales](accion_cert)?
+      - Que papel necesito para [desarrollar](accion_cert) el [acopio](accion_cert) de [materias primas](accion_cert)?
+
+  - intent: pregunta_accion_pci
+    examples: |
+      - Que papel necesito para [comerciar](accion_cert) una [bienes](accion_cert) en Curoscant?
+      - Que se requiere para [negociar](accion_cert) un [mercaderías](accion_cert) en Curoscant?
+      - Que debo hacer para [vender](accion_cert) [mercaderías](accion_cert) en Curoscant?
+      - Que pasos debo seguir para [fundar](accion_cert) una [empresa](accion_cert) en Curoscant?
+      - Como puedo [exportar](accion_cert) [productos](accion_cert) en Curoscant?
+      - Que necesito para [importar](accion_cert) [bienes](accion_cert) en Curoscant?
+      - Que papel necesito para [comerciar](accion_cert) en un [punto de venta](accion_cert) en Curoscant?
+      - Como puedo [establecer](accion_cert) una [tienda](accion_cert) en Curoscant?
+      - Que necesito para [emprender](accion_cert) un [negocio](accion_cert) en Curoscant?
+      - Que debo hacer para [comercializar](accion_cert) [servicios](accion_cert) en Curoscant?
+      - Que se requiere para [comerciar](accion_cert) en el [comercio electrónico](accion_cert) de Curoscant?
+      - Que pasos debo seguir para [negociar](accion_cert) un [productos](accion_cert) en Curoscant?
+      - Como puedo [vender](accion_cert) [productos](accion_cert) en un [comercio internacional](accion_cert)?
+      - Que papel necesito para [fundar](accion_cert) una [sucursal](accion_cert) en Curoscant?
+      - Que se requiere para [exportar](accion_cert) [servicios](accion_cert) en un [comercio interplanetario](accion_cert)?
+      - Como puedo [importar](accion_cert) [bienes](accion_cert) en el [comercio galáctico](accion_cert)?
+      - Que necesito para [establecer](accion_cert) un [punto de venta](accion_cert) en el [comercio intergaláctico](accion_cert)?
+      - Quiero sacar una [patente comercial](accion_cert)
+
+  - intent: pregunta_accion_cem
+    examples: |
+      - Que papel necesito para [demostrar](accion_cert) que hice el [servicio militar](accion_cert)?
+      - Que necesito para [acreditar](accion_cert) que [pertenecí](accion_cert) a las [fuerzas militares](accion_cert)?
+      - Como puedo [comprobar](accion_cert) que fui parte de las [fuerzas armadas](accion_cert)?
+      - Que pasos debo seguir para [validar](accion_cert) mi [servicio militar](accion_cert)?
+      - Que se requiere para [confirmar](accion_cert) que fui [militar](accion_cert)?
+      - Que debo hacer para [certificar](accion_cert) que [pertenecí](accion_cert) a la [fuerza armada](accion_cert)?
+      - Que papel necesito para [certificar](accion_cert) que [pertenecí](accion_cert) a la [fuerza jedi](accion_cert)?
+      - Que necesito para haber [serví](accion_cert) en [combate](accion_cert)?
+      - Como puedo [demostrar](accion_cert) que me [enrolé](accion_cert) en la [fuerza jedi](accion_cert)?
+      - Que se requiere para [comprobar](accion_cert) que estuve [alistado](accion_cert) en la [milicia](accion_cert)?
+      - Que se requiere para [comprobar](accion_cert) que estuve [enrolado](accion_cert) en la [milicia](accion_cert)?
+      - Que debo hacer para [demostrar](accion_cert) que [hice](accion_cert) mi [servicio militar](accion_cert)?
+      - Que debo hacer para [comprobar](accion_cert) que [hice](accion_cert) el [servicio militar](accion_cert)?
+      - Que papel necesito para [demostrar](accion_cert) que pertenezco a la [orden jedi](accion_cert)?
+      - Como [compruebo](accion_cert) que [participé](accion_cert) en [combate](accion_cert)?
+      
+  - intent: pregunta_accion_crc
+    examples: |
+      - Que papel necesito para [registrar](accion_cert) mi [carga](accion_cert)?
+      - Que se requiere para [documentar](accion_cert) la [mercancía](accion_cert)?
+      - Como puedo [certificar](accion_cert) [materias primas](accion_cert)?
+      - Que pasos debo seguir para [validar](accion_cert) el [embarque](accion_cert)?
+      - Que debo hacer para [inscribir](accion_cert) mis [productos](accion_cert) en los puertos de Curoscant?
+      - Que necesito para [inscribir](accion_cert) [bienes](accion_cert) en Curoscant?
+      - Como puedo [inventariar](accion_cert) mi [mercancía comercial](accion_cert) en Curoscant?
+      - Que papel necesito para [listar](accion_cert) los [artículos](accion_cert) al entrar en Curoscant?
+      - Que se requiere para [registrar](accion_cert) las [materias primas](accion_cert) en Curoscant?
+      - Como puedo [documentar](accion_cert) mi [carga](accion_cert)?
+      - Que papel debo tramitar para [certificar](accion_cert) los [suminisitros](accion_cert)?
+      - Que papel debo mostrar para [validar](accion_cert) mi [carga](accion_cert)?
+      - Con que papel debo [gestionar](accion_cert) la entrada de [mercancías comerciales](accion_cert)?
+      - Que papel necesito para [inscribir](accion_cert) mis [productos comerciales](accion_cert)?
+      - Que papel necesito para [inventariar](accion_cert) mis [productos](accion_cert)?
+      - Que papel necesito mostrar para [inventariar](accion_cert) los [bienes comerciales](accion_cert)?
+      - Que pasos debo seguir para [listar](accion_cert) los [bienes de consumo](accion_cert) de mi transporte?
+      - Que se requiere para [registrar](accion_cert) los [artículos de consumo](accion_cert) que transporto?
+
+  - intent: pregunta_accion_cbs
+    examples: |
+      - Que papel necesito para [acceder](accion_cert) a [beneficios](accion_cert)?
+      - Que papel se requiere para [recibir](accion_cert) un [subsidio](accion_cert)?
+      - Con que documento puedo [participar](accion_cert) en un [programa social](accion_cert)?
+      - Que debo hacer para [certificar](accion_cert) que pertenezco a un [programa social](accion_cert)?
+      - Que papel necesito para [inscribirme](accion_cert) en [sistema de bienestar](accion_cert)?
+      - Que documento es necesario para [registrarme](accion_cert) para recibir [ayuda social](accion_cert)?
+      - Con que papel puedo [registrarme](accion_cert) para los [beneficios sociales](accion_cert)?
+      - Que se requiere para [registrar](accion_cert) un [beneficio social](accion_cert)?
+      - Que necesito para [solicitar](accion_cert) [ayuda](accion_cert)?
+      - Como puedo [obtener](accion_cert) un [subsidio](accion_cert)?
+
+  - intent: preguntar_accion_riv
+    examples: |
+      - Que papel necesito para [registrar](accion_cert) un [invento](accion_cert)?
+      - Que se requiere para [inscribir](accion_cert) una [innovación](accion_cert)?
+      - Como puedo [patentar](accion_cert) una [invención](accion_cert)?
+      - Que debo hacer para [documentar](accion_cert) un [desarrollo tecnológico](accion_cert)?
+      - Que pasos debo seguir para [proteger](accion_cert) mi [invento](accion_cert)?
+      - Que necesito para [legalizar](accion_cert) un [desarrollo tecnológico](accion_cert)?
+      - Como puedo [formalizar](accion_cert) una [idea](accion_cert) de una [avance tecnológico](accion_cert)?
+      - Que papel necesito para [registrar](accion_cert) un [descubrimiento](accion_cert)?
+      - Que se requiere para [inscribir](accion_cert) un [aparato](accion_cert) [tecnológico](accion_cert)?
+      - Como puedo [patentar](accion_cert) un [dispositivo](accion_cert)?
+      - Que debo hacer para [proteger](accion_cert) la [invención](accion_cert) de una [máquina](accion_cert)?
+      - Que documento necesito para [proteger](accion_cert) una [creación tecnológica](accion_cert)?
+      - Que papel necesito para [legalizar](accion_cert) una [creación científica](accion_cert)?
+      - Con que papel puedo [formalizar](accion_cert) un [hallazgo](accion_cert)?
+      - Que papel necesito para [registrar](accion_cert) un [avance tecnológico](accion_cert)?
+      - Que papel se requiere para [inscribir](accion_cert) un [avance científico](accion_cert)?
+      - Con que documento puedo [patentar](accion_cert) un [prototipo](accion_cert)?
+
+  - intent: preguntar_accion_rdd
+    examples: |
+      - Que papel necesito para [registrar](accion_cert) mis [robots](accion_cert)?
+      - Que se requiere para [inscribir](accion_cert) mis [dróides](accion_cert)?
+      - Como puedo [certificar](accion_cert) un [robot](accion_cert)?
+      - Que debo hacer para [registrar](accion_cert) un [droide](accion_cert)?
+      - Que pasos debo seguir para [inscribir](accion_cert) [robots](accion_cert)?
+      - Que necesito para [certificar](accion_cert) [dróides](accion_cert)?
+      - Como puedo [registrar](accion_cert) [dróides](accion_cert)?
+      - Que se requiere para [inscribir](accion_cert) un [robot](accion_cert)?
+
+  - intent: preguntar_accion_pat
+    examples: |
+      - Que papel necesito para [aterrizar](accion_cert) durante un [aterrizaje](accion_cert)?
+      - Que se requiere para [desembarcar](accion_cert) en un [desembarque](accion_cert)?
+      - Como puedo [descender](accion_cert) durante un [descenso](accion_cert)?
+      - Que debo hacer para [ingresar](accion_cert) tras la [llegada al suelo](accion_cert)?
+      - Que pasos debo seguir para [autorizar](accion_cert) un [aterrizaje](accion_cert)?
+      - Que necesito para [permitir](accion_cert) el [desembarque](accion_cert) de una nave?
+      - Como puedo [descender](accion_cert) en una [llegada](accion_cert) controlada?
+      - Que se requiere para [ingresar](accion_cert) durante la [llegada al suelo](accion_cert) de la nave?
+
+  - intent: preguntar_accion_cat
+    examples: |
+      - Que papel necesito para [verificar](accion_cert) mis [antecedentes](accion_cert)?
+      - Que se requiere para [consultar](accion_cert) mis [antecedentes penales](accion_cert)?
+      - Como puedo [revisar](accion_cert) mi [historial penal](accion_cert)?
+      - Que debo hacer para [comprobar](accion_cert) mi [conducta](accion_cert)?
+      - Que pasos debo seguir para [verificar](accion_cert) mi [comportamiento](accion_cert)?
+      - Que necesito para [consultar](accion_cert) mis [antecedentes](accion_cert)?
+      - Como puedo [revisar](accion_cert) mis [antecedentes penales](accion_cert)?
+      - Que debo hacer para [comprobar](accion_cert) mi [historial penal](accion_cert)?
+
+  - intent: procesar_online
+    examples: |
+      - ¿Puedo hacerlo en línea?
+      - ¿Puedo hacerlo por internet?
+      - ¿Puedo hacerlo online?
+      - ¿Puedo hacerlo de forma remota?
+      - puedo sacar el documento por internet
+      - puedo sacar el documento en línea
+      - puedo sacar el documento online
+      - puedo sacarlo online
+      - puedo sacarlo en línea
+      - puedo sacarlo por internet
+      - puedo tramitarlo por internet
+      - puedo tramitarlo en línea
+      - puedo tramitarlo online
+      - puedes ayudarme a sacar ese documento
+      - puedes ayudarme a tramitar ese documento
+      - puedes ayudarme a obtener ese documento
+      - puedes hacerlo online
+      - puedes hacerlo en línea
+      - puedes hacerlo por internet
+      - puedo hacerlo online
+      - puedo hacerlo en línea
+      - puedo hacerlo por internet
+      - me puedes ayudar a sacarlo
+      - me puedes ayudar a tramitarlo
+      - me puedes ayudar a obtenerlo
+      - me puedes ayudar a sacar ese documento
+      - me puedes ayudar a tramitar ese documento
+      - me puedes ayudar a obtener ese documento
+  
+  ### AGENDAR CITA
+  - intent: sugerir_cita_afirmativa
+    examples: |
+      - Si, quiero agendar una cita
+      - Si, quiero solicitar una cita
+      - Si, quiero pedir una cita
+      - Si, quiero reservar una cita
+      - Si, quiero agendar una hora
+      - Si, quiero solicitar una hora
+      - Si, quiero pedir una
+      - Si, quiero reservar una hora
+      - Si, quiero agendar una cita con un funcionario
+  
+  - intent: sugerir_cita_negativa
+    examples: |
+      - No, no quiero agendar una cita
+      - No, no quiero solicitar una cita
+      - No, no quiero pedir una cita
+      - No, no quiero reservar una cita
+      - No, no quiero agendar una hora
+      - No, no quiero solicitar una hora
+      - No, no quiero pedir una hora
+      - No, no quiero reservar una hora
+      - No, no quiero agendar una cita con un funcionario
+
+  - intent: solicitar_cita
+    examples: |
+      - Puedo agendar una cita
+      - Puedo solicitar una cita
+      - Puedo pedir una cita
+      - Puedo reservar una cita
+      - Puedo agendar una hora
+      - Puedo solicitar una hora
+      - Puedo pedir una hora
+      - Puedo reservar una hora
+      - necesito una cita con un funcionario
+      - necesito ver a un funcionario
+      - quiero solicitar una hora
+      - quiero agendar una cita
+  
+  - intent: solicitar_info_cita_2
+    examples: |
+      - Mi nombre es (Emilio Ibarra Parraguez)[nombre_completo_usuario]
+      - Mi nombre es (Luisa Uribe)[nombre_completo_usuario]
+      - Mi nombre es (Daniel Henriquez Salazar)[nombre_completo_usuario]
+      - Mi nombre es (Juan Carlos del Rio Gonzalez)[nombre_completo_usuario]
+      - Mi nombre es (Maria Jose de la Fuente)[nombre_completo_usuario]
+      - Mi nombre es (Pedro Pablo de la Cruz Retamales)[nombre_completo_usuario]
+      - Mi nombre es (Ana Maria de la Sierra Perez)[nombre_completo_usuario]
+      - Mi nombre es (Pedro Esquivel)[nombre_completo_usuario]
+      - Mi nombre es (Isabel Castro Camacho)[nombre_completo_usuario]
+      - Mi nombre es (Ernesto del Valle)[nombre_completo_usuario]
+      - (Carlos Mendoza Reyes)[nombre_completo_usuario] 
+      - (Andrea Soto Morales)[nombre_completo_usuario] 
+      - (Javier Morales Fernández)[nombre_completo_usuario] 
+      - (Sofía Rodríguez López)[nombre_completo_usuario] 
+      - (Gabriel García Sánchez)[nombre_completo_usuario] 
+      - (Valentina López Díaz)[nombre_completo_usuario] 
+      - (Andrés Ramírez Castillo)[nombre_completo_usuario] 
+      - (Mariana Paredes Gutiérrez)[nombre_completo_usuario] 
+      - (Roberto Aguilar Pérez)[nombre_completo_usuario] 
+      - (Elena Navarro Rojas)[nombre_completo_usuario]
+      - (anonimo)[nombre_completo_usuario]
+      - (anónimo)[nombre_completo_usuario]
+
+  - intent: solicitar_info_cita_3
+    examples: |
+      - (ei@publilab.cl)[correo_usuario]
+      - (emilio.ibarra@gmail.com)[correo_usuario]
+      - (isabel_bonita@hotmail.com)[correo_usuario]
+      - (retorcido@yahoo.es)[correo_usuario]
+
+  - intent: solicitar_info_cita_4
+    examples: |
+      - (quiero sacar un formulario)[motivo_cita]
+      - (necesito pedir una ayuda social)[motivo_cita]
+      - (postular a un subsidio de vivienda)[motivo_cita]
+      - (solicitar un permiso de circulación)[motivo_cita]
+      - (quiero una guía para resolver un problema para pagar la luz)[motivo_cita]
+  
+  - intent: select_opcion_dia_cita
+    examples: |
+      - (lunes)[dia_cita]
+      - (martes)[dia_cita]
+      - (miércoles)[dia_cita]
+      - (jueves)[dia_cita]
+      - (viernes)[dia_cita]
+      - (sábado)[dia_cita]
+      - (domingo)[dia_cita]
+      - (miercoles)[dia_cita]
+      - (sabado)[dia_cita]
+
+  - intent: select_opcion_hora_cita
+    examples: |
+      - (8:00)[hora_cita]
+      - (8:30)[hora_cita]
+      - (9:00)[hora_cita]
+      - (9:30)[hora_cita]
+      - (10:00)[hora_cita]
+      - (10:30)[hora_cita]
+      - (11:00)[hora_cita]
+      - (11:30)[hora_cita]
+      - (12:00)[hora_cita]
+      - (12:30)[hora_cita]
+      - (13:00)[hora_cita]
+  
+  - intent: user_confirma_cita
+    examples: |
+      - (si)[confirmacion_cita]
+      - (sí)[confirmacion_cita]
+      - (claro)[confirmacion_cita]
+      - (por supuesto)[confirmacion_cita]
+      - (afirmativo)[confirmacion_cita]
+      - (correcto)[confirmacion_cita]
+  
+### RECLAMOS
+  - intent: reclamo_denuncia
+    examples: |
+      - Quiero hacer un reclamo
+      - Quiero presentar un reclamo
+      - Quiero hacer una queja
+      - Quiero presentar una queja
+      - Quisiera hacer un reclamo
+      - Quisiera presentar un reclamo
+      - Quisiera hacer una queja
+      - Quisiera presentar una queja
+      - Quiero reportar un incidente
+      - Quiero reportar un problema
+      - Quiero reportar una situación
+      - Quiero reportar una irregularidad
+      - Quiero hacer una denuncia
+      - quiero denunciar un problema
+
+  - intent: solicitar_info_reclamo_2
+    examples: |
+      - Emilio Ibarra, ei@publilab.cl
+      - Ernesto Pinto Benvides ernesto.pinto@gmail.com
+      - Segismunfo Larenas arcodentado_01@hotmail.com
+      - Maria Antonia Farias Saavedra. muñeca_dolly@yahoo.es
+      
+  - intent: reclamo_denuncia_3
+    examples: |
+      - (seguridad)[tipo_reclamo]
+      - (Seguridad)[tipo_reclamo]
+      - (trámites)[tipo_reclamo]
+      - (Trámites)[tipo_reclamo]
+      - (atención al cliente)[tipo_reclamo]
+      - (Atención al cliente)[tipo_reclamo]
+      - (Atención al Cliente)[tipo_reclamo]
+      - (comunidad)[tipo_reclamo]
+      - (Comunidad)[tipo_reclamo]
+      - (autoridades)[tipo_reclamo]
+      - (Autoridades)[tipo_reclamo]
+      - (servicios gubernamentales)[tipo_reclamo]
+      - (Servicios Gubernamentales)[tipo_reclamo]
+
+  - intent: reclamo_denuncia_4
+    examples: |
+      - Quiero denunciar una falta de seguridad en mi sector de Coruscant
+      - Hay una amenaza de terrorismo en mi zona, necesito que se tome medidas
+      - Los controles de seguridad en el transporte público son insuficientes
+      - Quiero reclamar por la falta de patrullaje en mi barrio
+      - He sido víctima de un crimen y no hay suficiente seguridad en la zona
+      - Necesito que se mejore la seguridad en las zonas comerciales de Coruscant
+      - Hay un aumento en la delincuencia en mi sector, reclamo más seguridad
+      - Quiero que se tomen medidas para prevenir los ataques terroristas en Coruscant
+      
+### LOOKUPS  
+  - lookup: nombre_usuario
+    examples: |
+      - Juan
+      - Maria
+      - Pedro
+      - Ana
+      - Luis
+      - Emilio Ibarra
+      - Luisa Uribe
+      - Emilio Ibarra Parraguez
+      - Emilio
+      - Carlos
+      - Sofia
+      - Ariel
+      - Andres
+      - Pedro Carvajal
+      - Valentina
+      - Diego
+      - Pedro Esquivel Troncoso
+      - Isabel Castro Camacho
+      - Ernesto del Valle
+      - Juan Carlos del Rio Gonzalez
+      - Maria Jose de la Fuente
+      - Pedro Pablo de la Cruz Retamales
+      - Ana Maria de la Sierra Perez
+
+  - lookup: campo_requisito
+    examples: |
+      - requisitos
+      - papeles
+      - papel
+      - documentos
+      - documento
+      - documentación
+      - documentacion
+  
+  - lookup: campo_ubicacion
+    examples: |
+      - donde
+      - a dónde
+      - dónde
+      - en donde
+      - dirección
+      - direccion
+      - oficina
+      - oficinas
+  
+  - lookup: campo_horario
+    examples: |
+      - horario
+      - hora
+      - atencion
+      - atención
+      - horarios
+  
+  - lookup: campo_contacto
+    examples: |
+      - correo electrónico
+      - escribir
+      - correo
+      - email
+      - e-mail
+  
+  - lookup: campo_telefono
+    examples: |
+      - telefono
+      - llamar
+      - holocom
+      - holocom number
+      - número
+      - teléfono
+
+  - lookup: campo_duracion
+    examples: |
+      - dura
+      - tiempo
+      - vigencia
+      - duración
+      - validez
+      - caduca
+      - tiempo de validez
+      - valides
+      - validez
+      - balides
+  
+  - lookup: campo_sanciones
+    examples: |
+      - pasar
+      - multa
+      - sancion
+      - penalidad
+      - sanción
+      - sanciones
+      - penalidades
+
+  - lookup: tipo_documento
+    examples: |
+      - certificado
+      - sertificado
+      - permiso
+      - licencia
+      - patente
+      - cédula
+      - cedula
+      - carné
+      - carnet
+      - carnese
+
+  - lookup: nombre_documento_cert
+    examples: |
+      - Certificado de Residencia Definitiva
+      - Certificado de Antecedentes
+      - Certificado de Estadía Temporal
+      - Certificado de Enrolamiento Militar de la República
+      - Certificado Registro de Droides
+      - Certificado Registro de Carga
+      - Certificado de Extracción Productiva
+
+  - lookup: nombre_documento_ced
+    examples: |
+      - Cédula Única Sistema Planetario
+      - Cédula de Bienestar Social
+
+  - lookup: accion_crd
+    examples: |
+      - demostrar
+      - demuestro
+      - acreditar
+      - acredito
+      - comprobar
+      - compruebo
+      - certificar
+      - certifico
+
+  - lookup: dia_cita
+    examples: |
+      - lunes
+      - martes
+      - miércoles
+      - jueves
+      - viernes
+      - sábado
+      - domingo
+  
+  - lookup: tipo_reclamo
+    examples: |
+      - seguridad
+      - trámites
+      - atención al cliente
+      - comunidad
+      - autoridades
+      - servicios 
+
+regex:
+  accion_crd: (?i)(demostrar|demuestro|acreditar|acredito|comprobar|compruebo|certificar|certifico)
+  sustantivo_crd: (?i)(domicilio|residencia|ciudadania|nacionalidad|ciudadano|vivo)
