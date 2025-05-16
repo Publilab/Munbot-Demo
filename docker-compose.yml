@@ -7,7 +7,10 @@ services:
       - "5005:5005"
     command: ["rasa", "run", "--enable-api", "--cors", "*", "--port", "5005"]
     volumes:
-      - ./rasa-core:/app
+      - ./rasa-core/data:/app/data
+      - ./rasa-core/config.yml:/app/config.yml
+      - ./rasa-core/domain.yml:/app/domain.yml
+      - rasa-models:/app/models
     networks:
       - munbot-network
     logging:
@@ -135,12 +138,12 @@ services:
         max-file: "3"
     restart: unless-stopped
 
-  # Microservicio Evolution Manager (panel de control)
   evolution-manager:
     build:
-      context: ./evolution-manager/evolution-manager
+      context: ./evolution-manager
       args:
         - VITE_API_URL=http://localhost:8080 # URL accesible desde el navegador
+    container_name: evolution-manager
     ports:
       - "9615:9615"
     environment:
@@ -204,10 +207,8 @@ services:
         max-file: "3"
     environment:
       - ALLOWED_IPS=127.0.0.1,192.168.65.1,172.18.0.5
-      - ALLOWED_IPS=127.0.0.1,172.18.0.2
     restart: unless-stopped
 
-   # n8n para automatización de flujos (usamos imagen oficial)
   n8n:
     image: n8nio/n8n:latest
     container_name: n8n
@@ -330,9 +331,12 @@ volumes:
   complaints-data:
   llm-models:
   n8n_data:
-  evolution-history:
   pg:
   ollama:
+  history.json:
+  rasa-models:
+  mongo_data:
+  redis_data:
   prometheus_data:
   grafana_data:
   cadvisor:

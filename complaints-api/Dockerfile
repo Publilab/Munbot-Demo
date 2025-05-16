@@ -9,8 +9,12 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN useradd -m -d /home/appuser -s /bin/bash appuser
 
 # Instalar dependencias
+# Instalar dependencias del sistema necesarias para compilar paquetes Python
+RUN apt-get update && apt-get install -y gcc libssl-dev build-essential libffi-dev && rm -rf /var/lib/apt/lists/*
+
 WORKDIR /app
 COPY requirements.txt .
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copiar código y configuraciones

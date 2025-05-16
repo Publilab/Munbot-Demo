@@ -2,12 +2,10 @@
 FROM python:3.10-slim
 
 # Actualizar e instalar dependencias del sistema
-RUN apt-get update && apt-get install -y gcc libssl-dev curl && rm -rf /var/lib/apt/lists/*
-
+RUN apt-get update && apt-get install -y gcc libssl-dev curl build-essential libffi-dev && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
-
-# Copiar el archivo de requerimientos e instalar dependencias de Python
 COPY requirements.txt .
+RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # <<-- Agregar esta línea para descargar el modelo spaCy
